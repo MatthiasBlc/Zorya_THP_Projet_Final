@@ -1,0 +1,16 @@
+<h1>Zorya votre plateforme e-learning</h1>
+<h2>Notre offre</h2>
+<!-- PRODUCT CARDS -->
+<div>
+  <% @offers.each do |offer| %>
+    <h5><%= offer.name %></h5>
+    <h5><%= offer.description %></h5>
+    <h5><% offer.learnings.each do |learning| %></h5>
+      <h5><%= learning.name %></h5>
+    <% end %>
+  <% end %>
+</div>
+<!-- PRODUCT CARDS END -->
+<div>
+  <%= button_to 'Demande de contact', carts_path, params: {item_id: @item.id} ,method: :post, class: "show-button" %>
+</div>
