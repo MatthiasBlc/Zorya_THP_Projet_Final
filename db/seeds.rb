@@ -51,15 +51,18 @@ end
 end
 
 offer_light = Offer.create(
-  name: 'Offre Light'
+  name: 'Offre Light',
+  description: 'Le minimum pour sensibiliser de vos collaborateurs. Elle comprend une formation par semestre.'
 )
 
 offer_essential = Offer.create(
-  name: 'Offre Essential'
+  name: 'Offre Essential',
+  description: 'Notre solution médiane, pour une sensibilisation continue de vos collaborateurs. Elle comprend une formation par trimestre.'
 )
 
 offer_excelcium = Offer.create(
-  name: 'Offre Excelcium'
+  name: 'Offre Excelcium',
+  description: "Elle vous garantie une formation optimale de vos collaborateurs. Elle comprend une formation par mois."
 )
 
 2.times do |i|
