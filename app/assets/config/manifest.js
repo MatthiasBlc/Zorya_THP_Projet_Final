@@ -10,8 +10,7 @@
 //= link dark.css
 
 //= link jquery.min.js
-//= link popper.min.js
-//= link bootstrap.min.js
+//= link bootstrap.min
 //= link perfect-scrollbar.js
 //= link dom-factory.js
 //= link material-design-kit.js
