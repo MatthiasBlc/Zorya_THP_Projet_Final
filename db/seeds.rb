@@ -35,14 +35,6 @@ learnings = ['Le phishing',
   )
 end
 
-10.times do |i|
-  user = User.create(
-    email: Faker::Internet.email,
-    password: 'password',
-    password_confirmation: 'password',
-    company: Company.all.sample
-  )
-end
 
 12.times do |i|
   
