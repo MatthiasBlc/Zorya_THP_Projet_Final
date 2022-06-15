@@ -58,7 +58,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Other gem
-  gem "better_errors"
+  gem 'better_errors'
   gem 'table_print'
   gem 'letter_opener'
 end
