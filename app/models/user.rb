@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  belongs_to :company
+  has_many :assignments
+  has_many :learnings, through: :assignments
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
