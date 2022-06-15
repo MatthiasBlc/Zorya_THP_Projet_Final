@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resource :contacts, only: [:new, :create] do
     get "/thanks" => "contacts#thanks"
   end
+  root to: 'offers#index'
 end
