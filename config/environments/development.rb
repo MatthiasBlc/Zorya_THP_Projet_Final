@@ -9,6 +9,10 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # Mailer
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host => 'zorya-learning-dev.herokuapp.com' }
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
@@ -27,8 +31,6 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  #Config action mailer in local & Heroku
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
