@@ -1,0 +1,12 @@
+<h3>Nous contacter</h3>
+<%= form_with(model: @contact, local: true) do |f| %>
+  <%= f.label :first_name, "Prénom" %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name, "Nom" %>
+  <%= f.text_field :last_name %>
+  <%= f.label :email, "Email" %>
+  <%= f.email_field :email, autocomplete: "email" %>
+  <%= f.label :content, "Votre message" %>
+  <%= f.text_field :content %>
+  <%= f.submit "Envoyer" %>
+<% end %>
