@@ -1,5 +1,6 @@
 class ContactMailer < ApplicationMailer
-
+  default from: 'zorya.learning@gmail.com'
+  
   def contact_mail(contact)
     @contact = contact
     @url = 'https://zorya-learning-dev.herokuapp.com/'
