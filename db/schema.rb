@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_15_103555) do
+ActiveRecord::Schema.define(version: 2022_06_15_183454) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "assignments", force: :cascade do |t|
-    t.string "name"
     t.integer "duration"
     t.datetime "assignment_done"
     t.datetime "created_at", null: false
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 2022_06_15_103555) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,6 +63,7 @@ ActiveRecord::Schema.define(version: 2022_06_15_103555) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "purchases", force: :cascade do |t|
@@ -75,8 +85,8 @@ ActiveRecord::Schema.define(version: 2022_06_15_103555) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status", default: 0
     t.bigint "company_id"
+    t.integer "status", default: 0
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

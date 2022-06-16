@@ -1,0 +1,5 @@
+              
+<% @assignments.each do |assignment|%>
+
+<p><%= link_to "#{assignment.learning.name}", learning_path(assignment.learning.id) %></p>
+<% end %>
