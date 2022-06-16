@@ -13,3 +13,60 @@
  *= require_tree .
  *= require_self
  */
+
+ /* HEADER */
+
+ .jumbotron {
+     display: flex !important;
+     flex-direction: column !important;
+     align-items: center !important;
+     justify-content: center !important;
+     height: 35em !important;
+     background: url('header-root.jpg');
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: 100%;
+     border-radius: 0 !important;
+ }
+
+ /* HEADER END */
+
+ /* ROOT PAGE */
+
+
+ .btn-secondary-outline {
+     border: 2px solid #5567ff !important;
+ }
+
+ .btn-secondary-outline:hover {
+    border: 2px solid #007bff !important;
+ }
+
+ .presentation-root {
+     margin-bottom: 10em;
+ }
+
+ .text-presentation-root0 {
+    width: 60%;
+    margin-right: 3em;
+    align-self: center;
+}
+
+ .text-presentation-root {
+     width: 60%;
+     margin-left: 3em;
+     align-self: center;
+ }
+
+ .img-presentation-root {
+     width: 40em;
+     border-radius: 15px;
+ }
+
+ #usp-section {
+     margin-bottom: 10em;
+ }
+
+
+ /* ROOT PAGE END */
