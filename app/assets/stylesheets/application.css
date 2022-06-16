@@ -70,3 +70,46 @@
 
 
  /* ROOT PAGE END */
+
+ /* DEVISE */
+
+ .section-form-devise {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .form-devise {
+     width: 30em;
+     height: 35em;
+     border: 3px solid #5567ff;
+     border-radius: 15px;
+     background-color: #22242e;
+     margin-top: 5em;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+
+ .fill-field {
+     width: 20em;
+     padding: 6px;
+     margin-bottom: 2em !important;
+     border: 2px solid #22242e;
+     border-radius: 5px;
+ }
+
+ .fill-field:hover {
+    border: 2px solid #5567ff !important;
+}
+
+ .actions {
+     display: flex;
+     justify-content: center;
+     margin-top: 2em;
+ }
+
+ /* DEVISE END */
