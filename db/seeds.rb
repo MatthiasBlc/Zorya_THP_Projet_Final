@@ -90,9 +90,9 @@ end
 end
 
 
-6.times do |i|
-  assignment = Assignment.create(
-    learning_id: Learning.all.sample.id,
-    user_id: User.all.sample.id
-  )
-end
+# 6.times do |i|
+#   assignment = Assignment.create(
+#     learning_id: Learning.all.sample.id,
+#     user_id: User.all.sample.id
+#   )
+# end
