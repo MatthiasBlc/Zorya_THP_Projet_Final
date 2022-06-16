@@ -2,104 +2,72 @@
 <html lang="en"
       dir="ltr"
       class="dark-mode">
-
   <head>
     <title>Zorya</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag    'spinkit', media: 'all' %>
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots"
               content="noindex">
-
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
               rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
     <!-- Perfect Scrollbar -->
     <%= stylesheet_link_tag    'perfect-scrollbar', media: 'all' %>
-
     <!-- Material Design Icons -->
     <%= stylesheet_link_tag    'material-icons', media: 'all' %>
-
     <!-- Font Awesome Icons -->
     <%= stylesheet_link_tag    'fontawesome', media: 'all' %>
-
     <!-- App CSS -->
     <%= stylesheet_link_tag    'app', media: 'all' %>
-
     <!-- Dark Mode CSS -->
-  <%= stylesheet_link_tag    'dark', media: 'all' %>
+    <%= stylesheet_link_tag    'dark', media: 'all' %>
   </head>
-  
   <body>
-   <!-- Drawer Layout -->
-
-        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+    <!-- Drawer Layout -->
+    <div class="mdk-drawer-layout js-mdk-drawer-layout"
              data-push
              data-responsive-width="992px">
-            <div class="mdk-drawer-layout__content page-content">
-
-                <!-- BEFORE Page Content -->
-
-                <!-- // END BEFORE Page Content -->
-
-                <!-- Page Content -->
-
-                <!-- Replace this with your page content -->
-                <%= render 'layouts/navbar' %>
-
-                <div class="container page__container flex d-flex my-32pt">
-                    <div class="application-shell-content">
-                        <span><%= yield %></span>
-                    </div>
-                </div>
-
-                <!-- // END Replace this with your page content -->
-
-                <!-- // END Page Content -->
-
-                <!-- Footer -->
-
-                <%= render 'layouts/footer' %>
-
-                <!-- // END Footer -->
-
-            </div>
-
-            <!-- // END drawer-layout__content -->
-
-            <!-- Drawer -->
-
-            
-
-            <!-- // END Sidebar Content -->
-            <%= render 'layouts/sidebar' %>
-            
-            <!-- // END Drawer -->
-
+      <div class="mdk-drawer-layout__content page-content">
+        <!-- BEFORE Page Content -->
+        <!-- // END BEFORE Page Content -->
+        <!-- Page Content -->
+        <!-- Replace this with your page content -->
+        <%= render 'layouts/navbar' %>
+        <% if current_page?(root_path) %>
+          <%= render 'layouts/header' %>
+        <% end %>
+        <div class="container page__container flex d-flex my-32pt">
+          <div class="" style="width: 100%">
+            <span><%= yield %></span>
+          </div>
         </div>
-    
+        <!-- // END Replace this with your page content -->
+        <!-- // END Page Content -->
+        <!-- Footer -->
+        <%= render 'layouts/footer' %>
+        <!-- // END Footer -->
+      </div>
+      <!-- // END drawer-layout__content -->
+      <!-- Drawer -->
+      <!-- // END Sidebar Content -->
+      <%= render 'layouts/sidebar' %>
+      <!-- // END Drawer -->
+    </div>
     <!-- jQuery -->
-        <%= javascript_include_tag 'jquery.min' %>
-
-        <!-- Bootstrap -->
-        <%= javascript_include_tag 'bootstrap.min' %>
-
-        <!-- Perfect Scrollbar -->
-        <%= javascript_include_tag 'perfect-scrollbar' %>
-
-        <!-- DOM Factory -->
-        <%= javascript_include_tag 'dom-factory' %>
-
-        <!-- MDK -->
-        <%= javascript_include_tag 'material-design-kit' %>
-
-        <!-- App JS -->
-        <%= javascript_include_tag 'app' %>
+    <%= javascript_include_tag 'jquery.min' %>
+    <!-- Bootstrap -->
+    <%= javascript_include_tag 'bootstrap.min' %>
+    <!-- Perfect Scrollbar -->
+    <%= javascript_include_tag 'perfect-scrollbar' %>
+    <!-- DOM Factory -->
+    <%= javascript_include_tag 'dom-factory' %>
+    <!-- MDK -->
+    <%= javascript_include_tag 'material-design-kit' %>
+    <!-- App JS -->
+    <%= javascript_include_tag 'app' %>
   </body>
 </html>
