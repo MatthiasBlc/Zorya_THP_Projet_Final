@@ -352,49 +352,49 @@ travel_security_learning = Learning.create(
 
 check_list_learning = Learning.create(
   name: "Ma check-list sécurité",
-  content: '',
+  content: 'a',
   duration: 4
 )
 
 gpdr_learning = Learning.create(
   name: "Le RGPD",
-  content: '',
+  content: 'a',
   duration: 4
 )
 
 social_engineering_learning = Learning.create(
   name: "L'ingéniérie sociale'",
-  content: '',
+  content: 'a',
   duration: 4
 )
 
 physical_security_learning = Learning.create(
   name: "Les mots de passe",
-  content: '',
+  content: 'a',
   duration: 4
 )
 
 fingerprint_learning = Learning.create(
   name: "Mon empreinte digitale",
-  content: '',
+  content: 'a',
   duration: 4
 )
 
 incident_reply_learning = Learning.create(
   name: "Que faire en cas d'incident de sécurité ?",
-  content: '',
+  content: 'a',
   duration: 4
 )
 
 usb_device_learning = Learning.create(
   name: "Les appareils USB",
-  content: '',
+  content: 'a',
   duration: 4
 )
 
 ransomwares_learning = Learning.create(
   name: "Les rançongiciels ou ransomwares",
-  content: '',
+  content: 'a',
   duration: 4
 )
 

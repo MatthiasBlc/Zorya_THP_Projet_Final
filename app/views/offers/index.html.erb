@@ -1,81 +1,75 @@
 <!-- USPs -->
 <div id="usp-section" class="row align-items-center">
-                            <div class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
-                                <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                    <i class="bi bi-book text-white icon-24pt"></i>
-                                </div>
-                                <div class="flex">
-                                    <div class="card-title mb-4pt">Large Choix d'Offres</div>
-                                    <p class="card-subtitle text-70">Explorez et trouvez celle qui vous correspond.</p>
-                                </div>
-                            </div>
-                            <div class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
-                                <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                    <i class="bi bi-patch-check-fill text-white icon-24pt"></i>
-                                </div>
-                                <div class="flex">
-                                    <div class="card-title mb-4pt">Fait Par Des Experts</div>
-                                    <p class="card-subtitle text-70">Tous nos cours ont été réalisés par des experts en cybersécurité .</p>
-                                </div>
-                            </div>
-                            <div class="d-flex col-md align-items-center">
-                                <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
-                                    <i class="bi bi-clock-history text-white icon-24pt"></i>
-                                </div>
-                                <div class="flex">
-                                    <div class="card-title mb-4pt">Accés Illimité</div>
-                                    <p class="card-subtitle text-70">Cours et ressources disponibles à vie après souscription d'une offre.</p>
-                                </div>
-                            </div>
-                        </div>
+  <div class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
+    <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+      <i class="bi bi-book text-white icon-24pt"></i>
+    </div>
+    <div class="flex">
+      <div class="card-title mb-4pt">Large Choix d'Offres</div>
+      <p class="card-subtitle text-70">Explorez et trouvez celle qui vous correspond.</p>
+    </div>
+  </div>
+  <div class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
+    <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+      <i class="bi bi-patch-check-fill text-white icon-24pt"></i>
+    </div>
+    <div class="flex">
+      <div class="card-title mb-4pt">Fait Par Des Experts</div>
+      <p class="card-subtitle text-70">Tous nos cours ont été réalisés par des experts en cybersécurité .</p>
+    </div>
+  </div>
+  <div class="d-flex col-md align-items-center">
+    <div class="rounded-circle bg-primary w-64 h-64 d-inline-flex align-items-center justify-content-center mr-16pt">
+      <i class="bi bi-clock-history text-white icon-24pt"></i>
+    </div>
+    <div class="flex">
+      <div class="card-title mb-4pt">Accés Illimité</div>
+      <p class="card-subtitle text-70">Cours et ressources disponibles à vie après souscription d'une offre.</p>
+    </div>
+  </div>
+</div>
 <!-- USPs END -->
-
 <!-- PRESENTATION -->
 <section class="presentation-root d-flex flex-row-reverse">
-  <div class="img-presentation-root"><%= image_tag('presentation-1', class: 'img-presentation-root', alt: 'package-photo') %></div>
+  <div class="img-presentation-root"><%= image_tag('presentation-1.png', class: 'img-presentation-root', alt: 'package-photo') %></div>
   <div class="text-presentation-root0">
     <h3 class="text-right">Zorya, pourquoi nous choisir ?</h3>
     <p class="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-        in pretium orci vestibulum eget.</p>
-  <div>
-</section>
-
-<section class="presentation-root d-flex flex-row">
-  <div class="img-presentation-root"><%= image_tag('presentation-2', class: 'img-presentation-root', alt: 'package-photo') %></div>
-  <div class="text-presentation-root">
-    <h3>Zorya, pourquoi nous choisir ?</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-        pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-        Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-        in pretium orci vestibulum eget.</p>
-  <div>
-</section>
-<!-- PRESENTATION END -->
-
-<h2 class="text-center">NOS OFFRES</h2>
-<!-- PRODUCT CARDS -->
-<div class=" d-flex flex-row justify-content-between flex-wrap">
-  <% @offers.each do |offer| %>
-    <div class="card" style="width: 18rem;">
-        <%= image_tag('photoshop_200x168.png', class: 'card-img-top', alt: 'package-photo') %>
-        <div class="card-body">
-          <h5 class="card-title"><%= offer.name %></h5>
-          <p class="card-text"><%= offer.description %></p>
-          <p><% offer.learnings.each do |learning| %></p>
-              <p>- <%= learning.name %></p>
+      pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+      Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+      in pretium orci vestibulum eget.</p>
+    <div>
+    </section>
+    <section class="presentation-root d-flex flex-row">
+      <div class="img-presentation-root"><%= image_tag('presentation-2.png', class: 'img-presentation-root', alt: 'package-photo') %></div>
+      <div class="text-presentation-root">
+        <h3>Zorya, pourquoi nous choisir ?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget.</p>
+        <div>
+        </section>
+        <!-- PRESENTATION END -->
+        
+        <h2 class="text-center">NOS OFFRES</h2>
+        <!-- PRODUCT CARDS -->
+        <div class=" d-flex flex-row justify-content-between flex-wrap">
+          <% @offers.each do |offer| %>
+            <div class="card" style="width: 18rem;">
+              <%= image_tag('photoshop_200x168.png', class: 'card-img-top', alt: 'package-photo') %>
+              <div class="card-body">
+                <h5 class="card-title"><%= offer.name %></h5>
+                <p class="card-text"><%= offer.description %></p>
+                <p><% offer.learnings.each do |learning| %></p>
+                  <p>- <%= learning.name %></p>
+                <% end %>
+              </div>
+              <div class="d-flex flex-row justify-content-around mb-4">
+                <a href="#" class="btn btn-primary">+ d'infos</a>
+                <a href="#" class="btn btn-secondary-outline text-light">choisir</a>
+              </div>
+            </div>
           <% end %>
-    </div>
-        <div class="d-flex flex-row justify-content-around mb-4">
-        <a href="#" class="btn btn-primary">+ d'infos</a>
-        <a href="#" class="btn btn-secondary-outline text-light">choisir</a>
         </div>
-</div>
-  <% end %>
-</div>
-
-
-<!-- PRODUCT CARDS END -->
-
-
+        <!-- PRODUCT CARDS END -->
