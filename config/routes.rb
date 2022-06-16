@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :learnings
 
+  resources :user_companies
   resources :companies
 
   resource :contacts, only: [:new, :create] do
