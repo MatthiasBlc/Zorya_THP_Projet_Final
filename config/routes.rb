@@ -6,4 +6,10 @@ Rails.application.routes.draw do
     get "/thanks" => "contacts#thanks"
   end
   root to: 'offers#index'
+
+  resources :users do 
+    resources :assignments 
+  end
+
+  resources :learnings
 end
