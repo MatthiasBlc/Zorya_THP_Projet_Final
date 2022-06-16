@@ -53,8 +53,13 @@
                 <!-- Replace this with your page content -->
                 <%= render 'layouts/navbar' %>
 
+                <% if current_page?(root_path) %>
+                <%= render 'layouts/header' %>
+                <% end %>
+                
+
                 <div class="container page__container flex d-flex my-32pt">
-                    <div class="application-shell-content">
+                    <div class="" style="width: 100%">
                         <span><%= yield %></span>
                     </div>
                 </div>
