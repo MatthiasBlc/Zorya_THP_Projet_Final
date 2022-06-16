@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  belongs_to :company
+  has_one :user_company
+  has_one :company, through: :user_company
   has_many :assignments
   has_many :learnings, through: :assignments
 
