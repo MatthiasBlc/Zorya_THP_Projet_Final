@@ -1,0 +1,5 @@
+<% if current_user.learnings.include?(@learning) %>
+<%= @learning.content.html_safe %>
+  <% else %>
+    <h3><%= "Vous n'avez pas accès à cette page"%><h3>
+  <% end %>
