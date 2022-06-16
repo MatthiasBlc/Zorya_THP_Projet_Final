@@ -1,2 +1,53 @@
-<h1>Companies#show</h1>
-<p>Find me in app/views/companies/show.html.erb</p>
+<h1>Mon entreprise</h1>
+<h1>Gestion des users</h1>
+<div class="">
+  <% @users.each do |user| %>
+    <div class="">
+      <h5>Utilisateur: <%= user.email %></h5>
+      <div>
+        delete
+      </div>
+    </div>
+    <hr class="">
+  <% end %>
+  <div>
+    <p>ajouter un user</p>
+  </div>
+</div>
+<%# Index
+un bouton add
+un bouton delete %>
+<h1>Gestion des learnings</h1>
+<div class="">
+  <% @learnings.each do |learning| %>
+    <div class="">
+      <h5>Utilisateur: <%= learning.name %></h5>
+      <div>
+        <% @users.each do |user| %>
+          <h6><%= user.email %>
+            <%if user.learnings.include?(learning)%>
+             désinscrire
+            <% else %>
+            <%= button_to 'inscrire', carts_path, remote: true, params: {item_id: item.id} ,method: :post, class: "add-button-index" %>
+            
+            <% end %>
+          </h6>
+        <% end %>
+      </div>
+    </div>
+    <hr class="">
+  <% end %>
+</div>
+<%# Index des learnings associés aux offers
+checkbox des users par formations  %>
+<h1>Index de ses offers</h1>
+<div class="">
+  <% @offers.each do |offer| %>
+    <% if @company.offers.include?(offer) %>
+      <h5>offre: <%= offer.name %></h5>
+    <% else %>
+      <h5>offre: <%= offer.name %> /non disponible</h5>
+    <% end %>
+    <hr class="">
+  <% end %>
+</div>
