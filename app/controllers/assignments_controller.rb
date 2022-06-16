@@ -14,18 +14,22 @@ class AssignmentsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @learning = Learning.find(params[:learning_id])
-    puts '%'*120
-    puts @user.id
-    puts @learning.id
-    puts '%'*120
-
     @assignment = Assignment.create(user_id: @user.id, learning_id: @learning.id)
 
     respond_to do |format|
-      format.html { redirect_to assignments_path, notice: 'inscription réussie' }
+      format.html { redirect_to company_path, notice: 'inscription réussie' }
       format.js {}
     end
   end
 
+  def destroy
+    @assignment = Assignment.find(params[:id])
+    @assignment.destroy
+
+    respond_to do |format|
+      format.html { redirect_to company_path, notice: "Désinscription réussie" }
+      format.js {}
+    end
+  end
 
 end

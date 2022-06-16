@@ -3,7 +3,8 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     @users = @company.users
     @learnings = @company.learnings
-    # @offers = @company.offers
+    @assignments = Assignment.all
+    
     @offers = Offer.all
   end
 end
