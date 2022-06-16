@@ -26,10 +26,10 @@ un bouton delete %>
         <% @users.each do |user| %>
           <h6><%= user.email %>
             <%if user.learnings.include?(learning)%>
-             désinscrire
+              <%= button_to "désinscrire", user_assignment_path(user.id, 
+             @assignments.find_by(user_id: user.id, learning_id: learning.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, learning_id: learning.id}, method: :delete, class: "form-btn" %>
             <% else %>
-            <%= button_to 'inscrire', user_assignments_path(user.id), remote: true, params: {user_id: user.id, learning_id: learning.id} ,method: :post, class: "" %>
-            
+              <%= button_to 'inscrire', user_assignments_path(user.id), remote: true, params: {user_id: user.id, learning_id: learning.id} ,method: :post, class: "" %>
             <% end %>
           </h6>
         <% end %>
