@@ -35,9 +35,55 @@
     <!-- Dark Mode CSS -->
   <%= stylesheet_link_tag    'dark', media: 'all' %>
   </head>
- 
+  
   <body>
-    <%= yield %>
+   <!-- Drawer Layout -->
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- BEFORE Page Content -->
+
+                <!-- // END BEFORE Page Content -->
+
+                <!-- Page Content -->
+
+                <!-- Replace this with your page content -->
+                <%= render 'layouts/navbar' %>
+
+                <div class="container page__container flex d-flex my-32pt">
+                    <div class="application-shell-content">
+                        <span><%= yield %></span>
+                    </div>
+                </div>
+
+                <!-- // END Replace this with your page content -->
+
+                <!-- // END Page Content -->
+
+                <!-- Footer -->
+
+                <%= render 'layouts/footer' %>
+
+                <!-- // END Footer -->
+
+            </div>
+
+            <!-- // END drawer-layout__content -->
+
+            <!-- Drawer -->
+
+            
+
+            <!-- // END Sidebar Content -->
+            <%= render 'layouts/sidebar' %>
+            
+            <!-- // END Drawer -->
+
+        </div>
+    
     <!-- jQuery -->
         <%= javascript_include_tag 'jquery.min' %>
 
