@@ -28,7 +28,7 @@ un bouton delete %>
             <%if user.learnings.include?(learning)%>
              désinscrire
             <% else %>
-            <%= button_to 'inscrire', carts_path, remote: true, params: {item_id: item.id} ,method: :post, class: "add-button-index" %>
+            <%= button_to 'inscrire', user_assignments_path(user.id), remote: true, params: {user_id: user.id, learning_id: learning.id} ,method: :post, class: "" %>
             
             <% end %>
           </h6>
