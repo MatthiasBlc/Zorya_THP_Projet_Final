@@ -4,14 +4,18 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Salut <%= @user.first_name %> et bienvenue chez nous !</h1>
+    <h1>Hello <%= @user.first_name %> et bienvenue chez nous !</h1>
     <p>
-      Tu t'es inscrit sur Zorya learning en utilisant l'e-mail suivant : <%= @user.email %>.
+      Tu t'es inscrit sur Zorya en utilisant l'e-mail suivant : <%= @user.email %>.
     </p>
     <p>
       Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
     </p>
-    <p> À très vite !
+    <p> À très vite !<br>L'équipe de formation,
     </p>
+    <hr>
+    <h3>Zorya, la plateforme e-learning</h3>
+    <p>Nous contacter : <%= @email %></p>
+    <p>Site web : <%= @website %></p>
   </body>
 </html>
