@@ -5,13 +5,28 @@
     <div class="">
       <h5>Utilisateur: <%= user.email %></h5>
       <div>
-        delete
+        <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, company_id: @company.id}, method: :delete, class: "form-btn" %>
       </div>
     </div>
     <hr class="">
   <% end %>
   <div>
     <p>ajouter un user</p>
+
+
+
+<%= form_tag user_companies_path, method: 'post', remote: true do %>
+<%= hidden_field_tag :company_id , @company.id %>
+        <%= email_field_tag 'email' %>
+        
+  <%= submit_tag "submit"%>
+
+<% end %>
+
+
+
+
+
   </div>
 </div>
 <%# Index
@@ -21,7 +36,7 @@ un bouton delete %>
 <div class="">
   <% @learnings.each do |learning| %>
     <div class="">
-      <h5>Utilisateur: <%= learning.name %></h5>
+      <h5>Learning: <%= learning.name %></h5>
       <div>
         <% @users.each do |user| %>
           <h6><%= user.email %>
