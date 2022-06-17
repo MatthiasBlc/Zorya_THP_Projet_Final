@@ -160,14 +160,16 @@
       </a>
       <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-header"><strong>Account</strong></div>
-        <a class="dropdown-item"
-                                   href="edit-account.html">Edit Account</a>
-        <a class="dropdown-item"
-                                   href="billing.html">Billing</a>
-        <a class="dropdown-item"
-                                   href="billing-history.html">Payments</a>
-        <a class="dropdown-item"
-                                   href="login.html">Logout</a>
+        <% if user_signed_in? %>
+     <%= link_to "Mon profil", edit_user_registration_path, class: " uppercase dropdown-item" %>
+              <%= link_to "Se déconnecter",  destroy_user_session_path, class: " uppercase dropdown-item" %>
+
+ <% else %>
+             <%= link_to "S'inscrire", new_user_registration_path, class: "uppercase dropdown-item" %>
+              <%= link_to "Se connecter", new_user_session_path, class: " uppercase dropdown-item" %>
+
+      <% end %>
+
       </div>
     </div>
   </div>
