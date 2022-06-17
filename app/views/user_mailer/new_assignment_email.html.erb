@@ -4,14 +4,18 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Salut <%= @user.first_name %> !</h1>
+    <h1>Hello <%= @user.first_name %> !</h1>
     <p>
-      Une nouvelle formation vient de vous être assignée !
+      Une nouvelle formation est disponible dans ton espace Zorya.
     </p>
     <p>
-      Retrouve la dans ton espace client via : <%= @url %>.
+      Retrouve la sur ton compte en te connectant directement ici : <%= @url %>.
     </p>
-    <p> À très vite !
+    <p> À très vite !<br>L'équipe de formation,
     </p>
+    <hr>
+    <h3>Zorya, la plateforme e-learning</h3>
+    <p>Nous contacter : <%= @email %></p>
+    <p>Site web : <%= @website %></p>
   </body>
 </html>

@@ -4,11 +4,14 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Salut <%= @user.first_name %> !</h1>
-    <p>
-      Félicitations tu viens d'achever une formation !
+    <h1>Hello <%= @user.first_name %> !</h1>
+    <br>
+    <p>Bravo ! Tu viens de terminer une formation. </p>
+    <p> À très vite !<br>L'équipe de formation,
     </p>
-    <p> À très vite !
-    </p>
+    <hr>
+    <h3>Zorya, la plateforme e-learning</h3>
+    <p>Nous contacter : <%= @email %></p>
+    <p>Site web : <%= @website %></p>
   </body>
 </html>
