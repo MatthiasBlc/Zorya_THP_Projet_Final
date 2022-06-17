@@ -1,1 +1,20 @@
-<p><%= link_to "Voir mes parcours",  user_assignments_path(@user.id) %></p>
+<h1>Espace personnel</h1>
+
+<div class="section-user-infos">
+    <div class="user-infos-1 d-flex flex-row flex-wrap">
+        <div class="user-avatar"><%= image_tag('whiteUser.svg', class: 'user-avatar-img', alt: 'logo') %></div>
+        <div class="user-h4">
+            <span class="user-span"><h4>Nom :</h4><p><%= @user.last_name %></p></span>
+            <span class="user-span"><h4>Prénom :</h4><p><%= @user.first_name %></p></span>
+            <span class="user-span"><h4>Email :</h4><p><%= @user.email %></p></span>
+        </div>
+    </div>
+    <div class="user-infos-2">
+
+    </div>
+    <hr>
+    <div class="section-btn-infos">
+        <p id="btn-user-infos" class="btn btn-secondary-outline"><%= link_to "Modifier mes informations",  edit_user_registration_path %></p>
+        <p id="btn-user-infos" class="btn btn-primary"><%= link_to "Voir mes parcours",  user_assignments_path(@user.id) %></p>
+    </div>
+</div>
