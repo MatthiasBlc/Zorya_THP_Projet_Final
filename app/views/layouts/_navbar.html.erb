@@ -24,6 +24,7 @@
   <!-- Navbar Menu -->
   <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
     <!-- Notifications dropdown -->
+    <% if user_signed_in? %>
     <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
                              data-toggle="tooltip"
                              data-title="Messages"
@@ -149,6 +150,8 @@
       </div>
     </div>
     <!-- // END Notifications dropdown -->
+    <% else %>
+    <% end %>
     <div class="nav-item dropdown">
       <a href="#"
                                class="nav-link d-flex align-items-center dropdown-toggle"
