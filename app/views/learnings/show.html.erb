@@ -7,4 +7,8 @@
   <%puts @assignment.id%>
 
 <%puts current_user.id%>
-<%= button_to "Valider la formation",  user_assignment_path(current_user.id, @assignment.id), params:{user_id: current_user.id, learning_id: @learning.id} ,method: "put", class: "" %>
+
+  <div class="validate-course-btn">
+    <%= button_to "Valider la formation",  user_assignment_path(current_user.id, @assignment.id), params:{user_id: current_user.id, learning_id: @learning.id} ,method: "put", class: "btn btn-primary" %>
+  </div>
+
