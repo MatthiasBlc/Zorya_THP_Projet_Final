@@ -25,131 +25,131 @@
   <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
     <!-- Notifications dropdown -->
     <% if user_signed_in? %>
-    <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
+      <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
                              data-toggle="tooltip"
                              data-title="Messages"
                              data-placement="bottom"
                              data-boundary="window">
-      <button class="nav-link btn-flush dropdown-toggle"
+        <button class="nav-link btn-flush dropdown-toggle"
                                     type="button"
                                     data-toggle="dropdown"
                                     data-caret="false">
-        <i class="bi bi-envelope icon-24pt"></i>
-      </button>
-      <div class="dropdown-menu dropdown-menu-right">
-        <div data-perfect-scrollbar
+          <i class="bi bi-envelope icon-24pt"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div data-perfect-scrollbar
                                      class="position-relative">
-          <div class="dropdown-header"><strong>Messages</strong></div>
-          <div class="list-group list-group-flush mb-0">
-            <a href="javascript:void(0);"
+            <div class="dropdown-header"><strong>Messages</strong></div>
+            <div class="list-group list-group-flush mb-0">
+              <a href="javascript:void(0);"
                                            class="list-group-item list-group-item-action unread">
-              <span class="d-flex align-items-center mb-1">
-                <small class="text-black-50">5 minutes ago</small>
-                <span class="ml-auto unread-indicator bg-accent"></span>
-              </span>
-              <span class="d-flex">
-                <span class="avatar avatar-xs mr-2">
-                  <%= image_tag('woman-5.jpg', class: 'avatar-img rounded-circle', alt: 'people') %>
+                <span class="d-flex align-items-center mb-1">
+                  <small class="text-black-50">5 minutes ago</small>
+                  <span class="ml-auto unread-indicator bg-accent"></span>
                 </span>
-                <span class="flex d-flex flex-column">
-                  <strong class="text-black-100">Michelle</strong>
-                  <span class="text-black-70">You passed you last course with...</span>
+                <span class="d-flex">
+                  <span class="avatar avatar-xs mr-2">
+                    <%= image_tag('woman-5.jpg', class: 'avatar-img rounded-circle', alt: 'people') %>
+                  </span>
+                  <span class="flex d-flex flex-column">
+                    <strong class="text-black-100">Michelle</strong>
+                    <span class="text-black-70">You passed you last course with...</span>
+                  </span>
                 </span>
-              </span>
-            </a>
-            <a href="javascript:void(0);"
+              </a>
+              <a href="javascript:void(0);"
                                            class="list-group-item list-group-item-action">
-              <span class="d-flex align-items-center mb-1">
-                <small class="text-black-50">5 minutes ago</small>
-              </span>
-              <span class="d-flex">
-                <span class="avatar avatar-xs mr-2">
-                  <%= image_tag('woman-5.jpg', class: 'avatar-img rounded-circle', alt: 'people') %>
+                <span class="d-flex align-items-center mb-1">
+                  <small class="text-black-50">5 minutes ago</small>
                 </span>
-                <span class="flex d-flex flex-column">
-                  <strong class="text-black-100">Michelle</strong>
-                  <span class="text-black-70">🔥 Superb job !</span>
+                <span class="d-flex">
+                  <span class="avatar avatar-xs mr-2">
+                    <%= image_tag('woman-5.jpg', class: 'avatar-img rounded-circle', alt: 'people') %>
+                  </span>
+                  <span class="flex d-flex flex-column">
+                    <strong class="text-black-100">Michelle</strong>
+                    <span class="text-black-70">🔥 Superb job !</span>
+                  </span>
                 </span>
-              </span>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- // END Notifications dropdown -->
-    <!-- Notifications dropdown -->
-    <div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
+      <!-- // END Notifications dropdown -->
+      <!-- Notifications dropdown -->
+      <div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
                              data-toggle="tooltip"
                              data-title="Notifications"
                              data-placement="bottom"
                              data-boundary="window">
-      <button class="nav-link btn-flush dropdown-toggle"
+        <button class="nav-link btn-flush dropdown-toggle"
                                     type="button"
                                     data-toggle="dropdown"
                                     data-caret="false">
-        <i class="bi bi-bell-fill icon-24pt"></i>
-        <span class="badge badge-notifications badge-accent">2</span>
-      </button>
-      <div class="dropdown-menu dropdown-menu-right">
-        <div data-perfect-scrollbar
+          <i class="bi bi-bell-fill icon-24pt"></i>
+          <span class="badge badge-notifications badge-accent">2</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div data-perfect-scrollbar
                                      class="position-relative">
-          <div class="dropdown-header"><strong>System notifications</strong></div>
-          <div class="list-group list-group-flush mb-0">
-            <a href="javascript:void(0);"
+            <div class="dropdown-header"><strong>System notifications</strong></div>
+            <div class="list-group list-group-flush mb-0">
+              <a href="javascript:void(0);"
                                            class="list-group-item list-group-item-action unread">
-              <span class="d-flex align-items-center mb-1">
-                <small class="text-black-50">3 minutes ago</small>
-                <span class="ml-auto unread-indicator bg-accent"></span>
-              </span>
-              <span class="d-flex">
-                <span class="avatar avatar-xs mr-2">
-                  <span class="avatar-title rounded-circle bg-light">
-                    <i class="bi bi-exclamation-octagon-fill font-size-20pt text-accent"></i>
+                <span class="d-flex align-items-center mb-1">
+                  <small class="text-black-50">3 minutes ago</small>
+                  <span class="ml-auto unread-indicator bg-accent"></span>
+                </span>
+                <span class="d-flex">
+                  <span class="avatar avatar-xs mr-2">
+                    <span class="avatar-title rounded-circle bg-light">
+                      <i class="bi bi-exclamation-octagon-fill font-size-20pt text-accent"></i>
+                    </span>
+                  </span>
+                  <span class="flex d-flex flex-column">
+                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
                   </span>
                 </span>
-                <span class="flex d-flex flex-column">
-                  <span class="text-black-70">Your profile information has not been synced correctly.</span>
-                </span>
-              </span>
-            </a>
-            <a href="javascript:void(0);"
+              </a>
+              <a href="javascript:void(0);"
                                            class="list-group-item list-group-item-action">
-              <span class="d-flex align-items-center mb-1">
-                <small class="text-black-50">5 hours ago</small>
-              </span>
-              <span class="d-flex">
-                <span class="avatar avatar-xs mr-2">
-                  <span class="avatar-title rounded-circle bg-light">
-                    <i class="bi bi-people-fill font-size-20pt text-primary"></i>
+                <span class="d-flex align-items-center mb-1">
+                  <small class="text-black-50">5 hours ago</small>
+                </span>
+                <span class="d-flex">
+                  <span class="avatar avatar-xs mr-2">
+                    <span class="avatar-title rounded-circle bg-light">
+                      <i class="bi bi-people-fill font-size-20pt text-primary"></i>
+                    </span>
+                  </span>
+                  <span class="flex d-flex flex-column">
+                    <strong class="text-black-100">Adrian. D</strong>
+                    <span class="text-black-70">Wants to join your private group.</span>
                   </span>
                 </span>
-                <span class="flex d-flex flex-column">
-                  <strong class="text-black-100">Adrian. D</strong>
-                  <span class="text-black-70">Wants to join your private group.</span>
-                </span>
-              </span>
-            </a>
-            <a href="javascript:void(0);"
+              </a>
+              <a href="javascript:void(0);"
                                            class="list-group-item list-group-item-action">
-              <span class="d-flex align-items-center mb-1">
-                <small class="text-black-50">1 day ago</small>
-              </span>
-              <span class="d-flex">
-                <span class="avatar avatar-xs mr-2">
-                  <span class="avatar-title rounded-circle bg-light">
-                    <i class="bi bi-arrow-up-square-fill font-size-20pt text-warning"></i>
+                <span class="d-flex align-items-center mb-1">
+                  <small class="text-black-50">1 day ago</small>
+                </span>
+                <span class="d-flex">
+                  <span class="avatar avatar-xs mr-2">
+                    <span class="avatar-title rounded-circle bg-light">
+                      <i class="bi bi-arrow-up-square-fill font-size-20pt text-warning"></i>
+                    </span>
+                  </span>
+                  <span class="flex d-flex flex-column">
+                    <span class="text-black-70">Your deploy was successful.</span>
                   </span>
                 </span>
-                <span class="flex d-flex flex-column">
-                  <span class="text-black-70">Your deploy was successful.</span>
-                </span>
-              </span>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- // END Notifications dropdown -->
+      <!-- // END Notifications dropdown -->
     <% else %>
     <% end %>
     <div class="nav-item dropdown">
@@ -164,15 +164,12 @@
       <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-header"><strong>Account</strong></div>
         <% if user_signed_in? %>
-     <%= link_to "Mon profil", edit_user_registration_path, class: " uppercase dropdown-item" %>
-              <%= link_to "Se déconnecter",  destroy_user_session_path, class: " uppercase dropdown-item" %>
-
- <% else %>
-             <%= link_to "S'inscrire", new_user_registration_path, class: "uppercase dropdown-item" %>
-              <%= link_to "Se connecter", new_user_session_path, class: " uppercase dropdown-item" %>
-
-      <% end %>
-
+          <%= link_to "Mon profil", edit_user_registration_path, class: " uppercase dropdown-item" %>
+          <%= link_to "Se déconnecter",  destroy_user_session_path, class: " uppercase dropdown-item" %>
+        <% else %>
+          <%= link_to "S'inscrire", new_user_registration_path, class: "uppercase dropdown-item" %>
+          <%= link_to "Se connecter", new_user_session_path, class: " uppercase dropdown-item" %>
+        <% end %>
       </div>
     </div>
   </div>
