@@ -139,3 +139,15 @@
 }
 
  /* DEVISE END */
+
+ /* FOOTER */
+
+ #social-icon {
+     margin-left: 1em;
+ }
+
+ #social-icon:hover {
+    color: #ffffff !important;
+}
+
+ /* FOOTER END */
