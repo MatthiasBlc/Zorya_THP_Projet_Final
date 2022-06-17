@@ -25,9 +25,9 @@
       <div class="application-shell-content">
         <span class="sidebar-text">
           <% if user_signed_in? %>
-            <%= link_to "Mes learnings", user_assignments_path(current_user.id), class: "" %><br>
+            <%= link_to "Mes formations", user_assignments_path(current_user.id), class: "" %><br>
             <% if current_user.status_customer? %>
-              <%= link_to "Ma company", company_path(current_user.company.id), class: "" %>
+              <%= link_to "Mon espace entreprise", company_path(current_user.company.id), class: "" %>
             <% end %>
           <% else %>
           <% end %>
