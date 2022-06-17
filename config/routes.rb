@@ -1,18 +1,25 @@
 Rails.application.routes.draw do
   root to: 'offers#index'
-
+  
   devise_for :users
- 
+
   resources :users do 
-    resources :assignments 
+    scope(path_names: { index: 'parcours' }) do
+    resources :assignments, path: 'parcours'
+    end
+  end
+  
+  scope(path_names: { show: 'formation' }) do
+    resources :learnings, path: 'formation'
   end
 
-  resources :learnings
-
   resources :user_companies
-  resources :companies
 
-  resource :contacts, only: [:new, :create] do
+  scope(path_names: { show: 'entreprise' }) do
+  resources :companies, path: 'entreprise'
+  end
+
+  resources :contacts, only: [:new, :create] do
     get "/thanks" => "contacts#thanks"
   end
 
