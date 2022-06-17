@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+UserCompany.destroy_all
 Assignment.destroy_all
 OfferLearning.destroy_all
 Purchase.destroy_all
 Offer.destroy_all
 Learning.destroy_all
+Company.destroy_all
+User.destroy_all
 
 5.times do |i|
   company = Company.create(
@@ -968,3 +970,14 @@ offer_learning18 = offer_learning = OfferLearning.create(
 #     user_id: User.all.sample.id
 #   )
 # end
+
+
+
+# create a customer for tests
+cust1  = User.create(email: "therealcustomer@yopmail.com", password: 'password', password_confirmation: 'password', status: 1)
+comp1 = Company.create(
+  name: 'test engine',
+)
+
+UserCompany.create(user: cust1, company: comp1)
+Purchase.create(company: comp1, offer: offer_essential)
