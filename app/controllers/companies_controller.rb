@@ -4,7 +4,7 @@ class CompaniesController < ApplicationController
     @users = @company.users
     @learnings = @company.learnings
     @assignments = Assignment.all
-    
     @offers = Offer.all
+    @user_companies = UserCompany.all
   end
 end

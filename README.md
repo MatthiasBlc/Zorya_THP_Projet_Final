@@ -1,5 +1,5 @@
 # Zorya
-link heroku
+https://zorya-learning.herokuapp.com/
 
 ## Table of contents
 * [General info](#general-info)

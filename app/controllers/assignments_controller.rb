@@ -11,6 +11,16 @@ class AssignmentsController < ApplicationController
     @assignment = Assignment.new
   end
 
+  def update
+    @assignment = Assignment.find(params[:id])
+    if @assignment.update(assignment_done: DateTime.current.to_date)
+      redirect_to user_assignments_path(current_user.id)
+    else
+      flash.now[:alert] = @assignment.errors.full_messages
+      render :edit
+    end
+  end
+
   def create
     @user = User.find(params[:user_id])
     @learning = Learning.find(params[:learning_id])
