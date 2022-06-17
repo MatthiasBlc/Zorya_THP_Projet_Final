@@ -54,9 +54,10 @@
       <!-- // END drawer-layout__content -->
       <!-- Drawer -->
       <!-- // END Sidebar Content -->
-
-      <%= render 'layouts/sidebar' %>
-
+      <% if user_signed_in? %>
+        <%= render 'layouts/sidebar' %>
+      <% else %>
+      <% end %>
       <!-- // END Drawer -->
     </div>
     <!-- jQuery -->
