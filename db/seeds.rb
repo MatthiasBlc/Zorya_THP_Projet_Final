@@ -19,7 +19,7 @@ Learning.destroy_all
   )
 end
 
-
+# DB for learnings
 password_learning = Learning.create(
   name: "Les mots de passe",
   content: "<h1 style='text-align: center'>Les mots de passe</h1>
@@ -102,7 +102,6 @@ password_learning = Learning.create(
   </div>",
   duration: 6
 )
-
 phishing_learning = Learning.create(
   name: "L'hammeçonnage ou phishing",
   content: "<h1 style='text-align: center'>L'hammeçonnage ou phishing</h1>
@@ -240,7 +239,6 @@ phishing_learning = Learning.create(
   que les conséquences sont parfois irréversibles.<br>",
   duration: 8
 )
-
 separation_of_uses_learning = Learning.create(
   name: "La séparation des usages",
   content: "<h1 style='text-align: center'>La séparation des usages</h1>
@@ -276,7 +274,6 @@ separation_of_uses_learning = Learning.create(
   <div>Si vous appliquez ces bonnes pratiques, vous limitez le risque que des personnes malveillantes volent des informations sensibles de votre entreprise après avoir réussi à prendre le contrôle de votre machine personnelle 💪.</div>",
   duration: 4
 )
-
 travel_security_learning = Learning.create(
   name: "Les déplacements professionnels",
   content: "<h1 style='text-align: center'>Les déplacements professionnels</h1>
@@ -349,7 +346,6 @@ travel_security_learning = Learning.create(
   </div>",
   duration: 7
 )
-
 check_list_learning = Learning.create(
   name: "Ma check-list sécurité",
   content: "<h1 style='text-align: center'>Ma check-list sécurité</h1>
@@ -483,7 +479,6 @@ check_list_learning = Learning.create(
   </div>",
   duration: 12
 )
-
 gpdr_learning = Learning.create(
   name: "Le RGPD",
   content: "<h1 style='text-align: center'>Le RGPD</h1>
@@ -550,7 +545,6 @@ gpdr_learning = Learning.create(
   </ul>",
   duration: 5
 )
-
 social_engineering_learning = Learning.create(
   name: "L'ingéniérie sociale",
   content: "<h1 style='text-align: center'>L'ingénierie sociale</h1>
@@ -598,7 +592,6 @@ social_engineering_learning = Learning.create(
   </div>",
   duration: 11
 )
-
 physical_security_learning = Learning.create(
   name: "La sécurité physique",
   content: "<h1 style='text-align: center'>La sécurité physique</h1>
@@ -649,7 +642,6 @@ physical_security_learning = Learning.create(
   </div>",
   duration: 6
 )
-
 fingerprint_learning = Learning.create(
   name: "Mon empreinte numérique",
   content: "<h1 style='text-align: center'>Mon empreinte numérique</h1>
@@ -701,7 +693,6 @@ fingerprint_learning = Learning.create(
   </div>",
   duration: 6
 )
-
 usb_device_learning = Learning.create(
   name: "Les appareils USB",
   content: "<h1 style='text-align: center'>Les appareils USB</h1>
@@ -738,7 +729,6 @@ usb_device_learning = Learning.create(
   </iframe>",
   duration: 8
 )
-
 ransomwares_learning = Learning.create(
   name: "Les rançongiciels ou ransomwares",
   content: "<h1 style='text-align: center'>Les rançongiciels (ransomwares)</h1>
@@ -800,18 +790,15 @@ ransomwares_learning = Learning.create(
   duration: 9
 )
 
-
-
+# DB for Offer
 offer_light = Offer.create(
   name: 'Offre Light',
   description: 'Le minimum pour sensibiliser de vos collaborateurs. Elle comprend une formation par semestre.'
 )
-
 offer_essential = Offer.create(
   name: 'Offre Essential',
   description: 'Notre solution médiane, pour une sensibilisation continue de vos collaborateurs. Elle comprend une formation par trimestre.'
 )
-
 offer_excelcium = Offer.create(
   name: 'Offre Excelcium',
   description: "Elle vous garantie une formation optimale de vos collaborateurs. Elle comprend une formation par mois."
@@ -824,12 +811,83 @@ offer_excelcium = Offer.create(
   )
 end
 
-5.times do |i|
-  offer_learning = OfferLearning.create(
-    learning_id: Learning.all.sample.id,
-    offer_id: Offer.all.sample.id
-  )
-end
+#DB for offer_learning
+offer_learning1 = offer_learning = OfferLearning.create(
+    learning_id: password_learning.id,
+    offer_id: offer_light.id
+)
+offer_learning2 = offer_learning = OfferLearning.create(
+  learning_id: phishing_learning.id,
+  offer_id: offer_light.id
+)
+
+
+offer_learning3 = offer_learning = OfferLearning.create(
+  learning_id: password_learning.id,
+  offer_id: offer_essential.id
+)
+offer_learning4 = offer_learning = OfferLearning.create(
+  learning_id: phishing_learning.id,
+  offer_id: offer_essential.id
+)
+offer_learning5 = offer_learning = OfferLearning.create(
+  learning_id: separation_of_uses_learning.id,
+  offer_id: offer_essential.id
+)
+offer_learning6 = offer_learning = OfferLearning.create(
+  learning_id: travel_security_learning.id,
+  offer_id: offer_essential.id
+)
+
+offer_learning7 = offer_learning = OfferLearning.create(
+  learning_id: password_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning8 = offer_learning = OfferLearning.create(
+  learning_id: phishing_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning9 = offer_learning = OfferLearning.create(
+  learning_id: separation_of_uses_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning10 = offer_learning = OfferLearning.create(
+  learning_id: travel_security_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning11 = offer_learning = OfferLearning.create(
+  learning_id: check_list_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning12 = offer_learning = OfferLearning.create(
+  learning_id: gpdr_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning13 = offer_learning = OfferLearning.create(
+  learning_id: social_engineering_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning14 = offer_learning = OfferLearning.create(
+  learning_id: physical_security_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning15 = offer_learning = OfferLearning.create(
+  learning_id: physical_security_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning16 = offer_learning = OfferLearning.create(
+  learning_id: fingerprint_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning17 = offer_learning = OfferLearning.create(
+  learning_id: usb_device_learning.id,
+  offer_id: offer_excelcium.id
+)
+offer_learning18 = offer_learning = OfferLearning.create(
+  learning_id: ransomwares_learning.id,
+  offer_id: offer_excelcium.id
+)
+
 
 
 # 15.times do |i|
