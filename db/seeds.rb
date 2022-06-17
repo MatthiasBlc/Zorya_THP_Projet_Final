@@ -789,6 +789,78 @@ ransomwares_learning = Learning.create(
   </li>",
   duration: 9
 )
+incident_crisis_learning = Learning.create(
+  name: "Gérer un incident de sécurité",
+  content: "<h1 style='text-align: center'>Gérer un incident de sécurité</h1>
+
+  <h2>1. Que faire en cas d’incident ?</h2>
+  <div>
+    Ne cédez pas à la panique, et ayez les bons réflexes.
+  </div>
+  <div>
+    En cas de comportement inhabituel de votre ordinateur, vous pouvez soupçonner une intrusion (impossibilité de se
+    connecter, activité importante, connexions ou activités inhabituelles, services ouverts non autorisés, fichiers
+    créés, modifiés ou supprimés sans autorisation,…). Prévenez votre hiérarchie, ainsi que le responsable de la
+    sécurité, au téléphone ou de vive voix, car l’intrus peut-être capable de lire les courriels. Prenez également
+    contact avec un prestataire informatique qui vous aidera dans la restauration de votre système ainsi que dans
+    l’analyse de l’attaque ;
+    Déconnectez la machine du réseau, pour stopper l’attaque. En revanche, maintenez là sous tension et ne la redémarrez
+    pas, pour ne pas perdre d’informations utiles pour l’analyse de l’attaque. Faites faire une copie physique du
+    disque. Faites rechercher les traces disponibles liées à la compromission. Un équipement n’étant jamais isolé dans
+    un système d’information, des traces de sa compromission doivent exister dans d’autres équipements sur le réseau
+    (pare-feu, routeurs, outils de détection d’intrusion, etc.). Déposez une plainte auprès de la brigade de gendarmerie
+    ou du service de police judiciaire compétent pour le siège de la société, de la Brigade d’enquêtes sur les fraudes
+    aux technologies de l’information (Paris et petite couronne), ou de la Direction générale de la sécurité intérieure.
+  </div>
+  <h2>2. Gérer la communication </h2>
+  <div>
+    En cas d'incident, vous devez savoir qui contacter, par quel canal et comment procéder en créant le moins de
+    frictions possible et en utilisant des ressources limitées, afin d'éviter un cauchemar pour le service client et/ou
+    des failles dans la communication. Il est préférable de commencer en interne par une équipe de réponse immédiate,
+    puis de progresser vers l'extérieur en sélectionnant les messages pour le bon public.
+  </div>
+  <div>
+    Bien que chaque organisation soit différente, il s'avère généralement judicieux de répartir ces publics en cinq
+    groupes distincts avec lesquels communiquer :
+  </div>
+  <ul>
+    <li>Équipe d'astreinte principale : la première à être informée en cas de problème, presque dès la survenue (en
+      général, par le biais d'outils de surveillance et d'alerte). Les équipes internes travaillent en coulisse pour
+      détecter, contextualiser et résoudre les incidents à l'aide d'outils de communication collaboratifs.</li>
+    <li>Équipe de support de première ligne : elle répond directement aux questions et fournit des mises à jour aux
+      clients pendant l'incident. Il s'agit d'un rôle extrêmement important, c'est pourquoi cette équipe doit obtenir
+      les bonnes informations à transmettre aux utilisateurs finaux.</li>
+    <li>Managers et équipe de direction : l'équipe principale doit communiquer avec ce groupe afin de savoir ce qui se
+      passe, de connaître l'impact potentiel sur les deux groupes ci-dessous, et éventuellement d'obtenir une
+      estimation de la durée du problème.</li>
+    <li>Employés dans leur ensemble : les employés doivent être tenus informés de l'évolution des services auxquels
+      ils font confiance. Communiquer de manière proactive avec ces utilisateurs permet de réduire le nombre de
+      questions sur l'état d'avancement et de tickets de support informatique en double, et de se concentrer davantage
+      sur la résolution des problèmes rencontrés.</li>
+    <li>Clients externes : si l'incident touche des clients externes, il convient d'envoyer une communication pour
+      leur expliquer le problème et à quel moment ils peuvent attendre une résolution, ou au moins des mises à jour
+      régulières. Pour les problèmes qui continuent d'affecter la capacité de vos clients à utiliser votre produit,
+      nous recommandons de ne jamais attendre plus d'une heure sans envoyer de mise à jour. En outre, vous devez
+      toujours indiquer la date de la prochaine mise à jour. S'il s'agit d'un incident suffisamment grave, en
+      particulier un incident impliquant la sécurité ou la perte de données, vous souhaiterez peut-être accélérer les
+      communications externes et faire appel aux autres équipes compétentes (juridique, RH, sécurité, etc.)</li>
+  </ul>
+  <h2>3. Et après ? </h2>
+  
+  <div>
+    Après l’incident : réinstallez complètement le système d’exploitation à partir d’une version saine, supprimez tous les
+    services inutiles, restaurez les données d’après une copie de sauvegarde non compromise, et changez tous les mots de
+    passe du système d’information.
+  </div>
+  
+  <h3>🧠 Pour aller plus loin :</h3>
+  <li>
+    <a href='https://www.ssi.gouv.fr/en-cas-dincident/' target='_blank'>Le guide de l'ANSSI concernant la gestion des
+      incidents.</a>
+    <a href='https://open.spotify.com/show/6uIlXulpYOsLLsijqjIWNw?go=1&sp_cid=30c51264-b7de-4b66-9c70-e29fbb34270c&utm_source=embed_player_p&utm_medium=desktop&nd=1' target='_blank'>Podcast : Préparer sa réponse à incident ➡️ <i>Le Comptoir Sécu.</i></a>
+  </li>",
+  duration: 9
+)
 
 # DB for Offer
 offer_light = Offer.create(
@@ -872,7 +944,7 @@ offer_learning14 = offer_learning = OfferLearning.create(
   offer_id: offer_excelcium.id
 )
 offer_learning15 = offer_learning = OfferLearning.create(
-  learning_id: physical_security_learning.id,
+  learning_id: incident_crisis_learning.id,
   offer_id: offer_excelcium.id
 )
 offer_learning16 = offer_learning = OfferLearning.create(
