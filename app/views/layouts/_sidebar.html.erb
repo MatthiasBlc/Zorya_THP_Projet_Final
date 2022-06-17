@@ -22,12 +22,13 @@
         </span>
         <span>Zorya</span>
       </a>
-      <div class="application-shell-content">
+      <div class="sidebar-container">
         <span class="sidebar-text">
           <% if user_signed_in? %>
-            <%= link_to "Mes formations", user_assignments_path(current_user.id), class: "" %><br>
+            <%= link_to "Accueil", root_path, class: "sidebar-link" %><br>
+            <%= link_to "Mes formations", user_assignments_path(current_user.id), class: "sidebar-link" %><br>
             <% if current_user.status_customer? %>
-              <%= link_to "Mon espace entreprise", company_path(current_user.company.id), class: "" %>
+              <%= link_to "Mon espace entreprise", company_path(current_user.company.id), class: "sidebar-link" %>
             <% end %>
           <% else %>
           <% end %>

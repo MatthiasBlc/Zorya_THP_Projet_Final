@@ -250,3 +250,21 @@
 }
 
 /* COURSE CONTENT END */
+
+/* SIDEBAR */
+ .sidebar-container {
+     padding-left: 2em;
+ }
+
+ .sidebar-link {
+     text-transform: uppercase;
+     font-weight: bold;
+     color: rgb(147, 147, 147) !important;
+     font-size: 14px !important;
+ }
+
+ .sidebar-link:hover {
+    color: rgb(255, 255, 255) !important;
+   }
+    
+/* SIDEBAR END */
