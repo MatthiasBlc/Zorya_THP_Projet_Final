@@ -4,7 +4,7 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     if current_user.company != @company
       flash[:danger] = "Vous n'avez pas accès à cette page"
-      redirect_to user_assignments_path(current_user.id)
+      redirect_to root_path()
     end
     @users = @company.users
     @learnings = @company.learnings
