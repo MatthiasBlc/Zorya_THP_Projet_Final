@@ -92,6 +92,21 @@
      justify-content: center;
  }
 
+ .form-devise-edit {
+    width: 40em;
+    height: 50em;
+    border: 3px solid #5567ff;
+    border-radius: 15px;
+    background-color: #22242e;
+    margin-top: 5em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
  .fill-field {
@@ -112,4 +127,27 @@
      margin-top: 2em;
  }
 
+ .btn-secondary-edit {
+    border: 2px solid #5567ff !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    padding: 6git px !important;
+}
+
+.btn-secondary-edit:hover {
+   border: 2px solid #007bff !important;
+}
+
  /* DEVISE END */
+
+ /* FOOTER */
+
+ #social-icon {
+     margin-left: 1em;
+ }
+
+ #social-icon:hover {
+    color: #ffffff !important;
+}
+
+ /* FOOTER END */
