@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Mailer
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => 'zorya-learning-dev.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'zorya-learning.herokuapp.com' }
 
   # Show full error reports.
   config.consider_all_requests_local = true
