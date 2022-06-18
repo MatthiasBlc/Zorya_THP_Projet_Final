@@ -37,9 +37,8 @@ class AssignmentsController < ApplicationController
     @assignment.destroy
 
     respond_to do |format|
-      format.html { redirect_to company_path, notice: "Désinscription réussie" }
+      format.html { redirect_to company_path, notice: 'Désinscription réussie' }
       format.js {}
     end
   end
-
 end

@@ -5,13 +5,9 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
-
   private
-  def sign_in
-    if user_signed_in?
-      redirect_to user_path(current_user.id)
-    else
-    end
-  end
 
+  def sign_in
+    redirect_to user_path(current_user.id) if user_signed_in?
+  end
 end
