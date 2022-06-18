@@ -3,10 +3,6 @@ class AssignmentsController < ApplicationController
     @assignments = Assignment.all
   end
 
-  def show
-    @assignment = Assignment.find(params[:id])
-  end
-
   def new
     @assignment = Assignment.new
   end
