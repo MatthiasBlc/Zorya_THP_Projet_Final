@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
-
   root to: 'offers#index'
-  
+
   devise_for :users
 
-  resources :users do 
+  resources :users do
     scope(path_names: { index: 'parcours' }) do
-    resources :assignments, path: 'parcours'
+      resources :assignments, path: 'parcours'
     end
   end
-  
+
   scope(path_names: { show: 'formation' }) do
     resources :learnings, path: 'formation'
   end
@@ -17,11 +16,10 @@ Rails.application.routes.draw do
   resources :user_companies
 
   scope(path_names: { show: 'entreprise' }) do
-  resources :companies, path: 'entreprise'
+    resources :companies, path: 'entreprise'
   end
 
-  resources :contacts, only: [:new, :create] do
-    get "/thanks" => "contacts#thanks"
+  resources :contacts, only: %i[new create] do
+    get '/thanks' => 'contacts#thanks'
   end
-
 end

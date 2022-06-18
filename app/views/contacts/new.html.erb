@@ -2,25 +2,25 @@
   <h3>Nous contacter</h3>
   <div class="form-devise-msg">
     <%= form_with(model: @contact, local: true) do |f| %>
-    <div class="field">
-      <%= f.label :last_name, "Nom" %><br>
-      <%= f.text_field :last_name, class: "fill-field" %>
-    </div>
-    <div class="field">
-      <%= f.label :first_name, "Prénom" %><br>
-      <%= f.text_field :first_name, class: "fill-field" %>
-    </div>
-    <div class="field">
-      <%= f.label :email, "Email" %><br>
-      <%= f.email_field :email, autocomplete: "email", class: "fill-field" %>
-    <div class="field">
-      <%= f.label :content, "Votre message" %><br>
-      <%= f.text_field :content, class: "fill-field-msg" %>
-    </div>
-      <div class="actions">
-        <%= button_tag( :class => "btn btn-primary", :type => "submit" ) do %> Envoyer
-                                <% end %>
+      <div class="field">
+        <%= f.label :last_name, "Nom" %><br>
+        <%= f.text_field :last_name, class: "fill-field" %>
       </div>
-    <% end %>
-  </div>
-</section>
+      <div class="field">
+        <%= f.label :first_name, "Prénom" %><br>
+        <%= f.text_field :first_name, class: "fill-field" %>
+      </div>
+      <div class="field">
+        <%= f.label :email, "Email" %><br>
+        <%= f.email_field :email, autocomplete: "email", class: "fill-field" %>
+        <div class="field">
+          <%= f.label :content, "Votre message" %><br>
+          <%= f.text_field :content, class: "fill-field-msg" %>
+        </div>
+        <div class="actions">
+          <%= button_tag( :class => "btn btn-primary", :type => "submit" ) do %> Envoyer
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </section>

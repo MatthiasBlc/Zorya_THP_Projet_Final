@@ -15,15 +15,15 @@ Learning.destroy_all
 Company.destroy_all
 User.destroy_all
 
-5.times do |i|
+5.times do |_i|
   company = Company.create(
-    name: Faker::Company.name,
+    name: Faker::Company.name
   )
 end
 
 # DB for learnings
 password_learning = Learning.create(
-  name: "Les mots de passe",
+  name: 'Les mots de passe',
   content: "<h1 style='text-align: center'>Les mots de passe</h1>
 
   <div>
@@ -42,7 +42,7 @@ password_learning = Learning.create(
     deviner par une tierce personne.
   </div>
   <h2>2. Comment bien le choisir ?</h2>
-  
+
   <div>
     Choisissez des mots de passe composés si possible de 12 caractères minimum de type différent
     (majuscules, minuscules, chiffres, caractères spéciaux) n’ayant aucun lien avec vous
@@ -58,7 +58,7 @@ password_learning = Learning.create(
     </ul>
   </div>
   <h2>3. Quelques conseils supplémentaires</h2>
-  
+
   <div>
     Définissez un mot de passe unique pour chaque service sensible. Les mots de passe
     protégeant des contenus sensibles (banque, messagerie professionnelle…) ne doivent
@@ -70,11 +70,11 @@ password_learning = Learning.create(
     s’occupe
     ensuite de stocker vos mots de passe de manière sécurisée.
   </div>
-  
+
   <div>
     Changez son mot de passe régulièrement est une bonne pratique, tous les 3 mois semble être une bonne durée.
   </div>
-  
+
   <div>
     En entreprise :
     <ul>
@@ -89,9 +89,9 @@ password_learning = Learning.create(
       <li> Par ailleurs, il ne faut pas non plus stocker ses mot de passe dans les navigateurs, et encore plus lors de
         l’utilisation ou la connexion à un ordinateur public ou partagé (salons, déplacements…).</li> </ul>
   </div>
-  
+
   <div>
-  
+
     <h3>🧠 Pour aller plus loin :</h3>
     <ul>
       <li><a href='https://www.economie.gouv.fr/particuliers/creer-mot-passe-securise' target='_blank'>Créer un mot de passe sécurisé</a>
@@ -100,7 +100,7 @@ password_learning = Learning.create(
           href='https://www.ssi.gouv.fr/administration/precautions-elementaires/calculer-la-force-dun-mot-de-passe/' target='_blank'>Calculer
           la force d'un mot de passe</a></li>
     </ul>
-  
+
   </div>",
   duration: 6
 )
@@ -109,14 +109,14 @@ phishing_learning = Learning.create(
   content: "<h1 style='text-align: center'>L'hammeçonnage ou phishing</h1>
 
   <h2>1. Qu'est ce que l'hammeçonnage ou le phishing ?</h2>
-  
+
   <i>L’hameçonnage ou phishing est une technique utilisée par des fraudeurs pour obtenir des renseignements personnels
     dans le but de perpétrer une usurpation d'identité. La technique consiste à faire croire à la victime qu'elle
     s'adresse à un tiers de confiance — banque, administration, etc. — afin de lui soutirer des renseignements personnels
     : mot de passe, numéro de carte de crédit, numéro ou photocopie de la carte d'identité, date de naissance, etc.</i>
-  
+
   <h2>2. Trois conseils pour éviter les attaques par hammeçonnage:</h2>
-  
+
   Qu’il s’agisse d’une offensive de grande ampleur ou d’une campagne restreinte mais plus ciblée, toutes les attaques
   réussies de phishing et de ransomwares par e-mail provoquent des perturbations et des préjudices. Ces attaques
   s’appuient sur des erreurs humaines. Autrement dit,
@@ -149,7 +149,7 @@ phishing_learning = Learning.create(
     mobile, maintenez votre doigt appuyé sur ces éléments et examinez les informations qui s’affichent dans la fenêtre
     contextuelle.<br>
     Si ces informations ne correspondent à ce à quoi vous vous attendiez, redoublez de prudence. <br>
-  
+
     <br>
     <b>Le contenu ou le sujet d’un message peut ne pas être tout à fait juste ou pertinent.</b> Soyez vigilant si le ton
     d’une-mail envoyé par un collègue, un ami ou un membre de votrefamille semble inapproprié ou ne lui ressemble pas.
@@ -159,7 +159,7 @@ phishing_learning = Learning.create(
       d’orthographe et de grammaire peuvent indiquer que le message ne provient pas d’une source de confiance.</b> C’est
     particulièrement vrai pour les messages qui semblent provenir d’une personne ou d’une entreprise réputée et bien
     établie.<br> <br>
-  
+
     De manière générale, tout e-mail non sollicité, c’est-à-dire que vous ne vous attendiez pas à recevoir, doit
     faire
     l’objet d’un examen attentif. <b>Méfiez-vous particulièrement des e-mails qui semblent avoir été conçus pour
@@ -167,18 +167,18 @@ phishing_learning = Learning.create(
     répondre ou à agir d’une certaine manière (cliquer sur un lien, télécharger un fichier, confirmer/modifier un mot
     de passe, etc.).
   </div>
-  
+
   <div>
     <h3>Prenez le temps de la réflexion</h3>
   </div>
   <div>
-  
+
     Lorsque vous avez fini de lire un e-mail, prenez un instant pour l’assimiler. Il est essentiel que vous
     preniez le temps d’y réfléchir, plutôt que d’agir hâtivement. Pour vous défaire de l’habitude de survoler les
     messages et d’y répondre dans la précipitation, posez-vous quelques questions si vous recevez un e-mail demandant
     une
     réponse ou une action susceptible de compromettre des données sensibles, des appareils ou des systèmes.
-  
+
     Par exemple :
     <div>
       <ul>
@@ -197,14 +197,14 @@ phishing_learning = Learning.create(
       </ul>
     </div>
   </div>
-  
+
   <div>
-  
+
     <h3>Vérifiez plutôt deux fois qu’une</h3>
   </div>
-  
+
   <div>
-  
+
     Mieux vaut prévenir que guérir. Gardez en permanence à l’esprit que les apparences sont trompeuses, surtout dans le
     cas d’escroqueries par phishing. Un message peut sembler légitime,
     sans qu’il n’en soit rien. Par exemple, un e-mail provenant d’une adresse informatique d’entreprise et vous demandant
@@ -234,7 +234,7 @@ phishing_learning = Learning.create(
       </ul>
     </div>
   </div>
-  
+
   Il ne faut qu’une minute pour vérifier un message suspect, qu’il ait été envoyé par un collègue, un département
   interne, un établissement financier ou une autre source. En revanche, remédier aux conséquences d’une interaction
   avec un e-mail de phishing ou contenant un ransomware peut prendre des jours ou des semaines (voire plus). Sans compter
@@ -242,7 +242,7 @@ phishing_learning = Learning.create(
   duration: 8
 )
 separation_of_uses_learning = Learning.create(
-  name: "La séparation des usages",
+  name: 'La séparation des usages',
   content: "<h1 style='text-align: center'>La séparation des usages</h1>
 
   <div>
@@ -277,7 +277,7 @@ separation_of_uses_learning = Learning.create(
   duration: 4
 )
 travel_security_learning = Learning.create(
-  name: "Les déplacements professionnels",
+  name: 'Les déplacements professionnels',
   content: "<h1 style='text-align: center'>Les déplacements professionnels</h1>
 
   <div>
@@ -311,7 +311,7 @@ travel_security_learning = Learning.create(
     </ul>
   </div>
   <h2>2. Pendant le déplacement</h2>
-  
+
   <ul>
     <li> Gardez vos appareils, supports et fichiers avec vous, pendant votre voyage comme
       pendant votre séjour (ne les laissez pas dans un bureau ou un coffre d’hôtel). </li>
@@ -329,7 +329,7 @@ travel_security_learning = Learning.create(
     <li> Refusez la connexion d’équipements appartenant à des tiers à vos propres équipements (smartphone, clé USB,
       cigarette électronique…)</li>
   </ul>
-  
+
   <h2>3. Après le déplacement</h2>
   <ul>
     <li> Effacez l’historique des appels et de navigation. </li>
@@ -349,7 +349,7 @@ travel_security_learning = Learning.create(
   duration: 7
 )
 check_list_learning = Learning.create(
-  name: "Ma check-list sécurité",
+  name: 'Ma check-list sécurité',
   content: "<h1 style='text-align: center'>Ma check-list sécurité</h1>
 
   <div>
@@ -407,11 +407,11 @@ check_list_learning = Learning.create(
       <li> Testez votre navigateur à l'aide d'un outil comme Panopticlick pour vous assurer qu'il n'y a pas de problème
         majeur. BrowserLeaks et Am I Unique sont également utiles pour explorer les informations sur les appareils que
         vous transmettez aux sites Web.</li>
-  
+
     </ul>
   </div>
   <h2>Téléphone</h2>
-  
+
   <ul>
     <li> Définissez un code PIN pour l'appareil, idéalement utilisez un mot de passe long (minimum 12 caractères). Si
       cette option est prise en charge, configurez l'authentification par empreinte digitale ou FaceID. </li>
@@ -434,12 +434,12 @@ check_list_learning = Learning.create(
     <li> Comprenez que les applications contiennent des traceurs qui collectent, stockent et parfois partagent vos
       données. Pour Android, vous pouvez utiliser <a href='https://exodus-privacy.eu.org/en/page/what/'
         target='_blank'>Exodus</a> pour révéler quels traceurs les applications installées utilisent.</li>
-  
+
   </ul>
   <div>
     <h2>Courriel</h2>
   </div>
-  
+
   <div>
     Il est important de protéger votre compte de messagerie électronique, car si un pirate y a accès, il pourra se faire
     passer pour vous et réinitialiser les mots de passe de vos autres comptes en ligne. L'une des plus grandes menaces
@@ -471,7 +471,7 @@ check_list_learning = Learning.create(
   <ul>
     <li> Utilisez un VPN réputé pour protéger votre IP et réduire la quantité de données de navigation que votre fournisseur d’accès à Internet peut enregistrer, mais comprenez leurs limites. Parmi les bonnes options figurent ProtonVPN et Mullvad, voir <a href='https://thatoneprivacysite.net/' target='_blank'>ThatonePrivacySite</a> pour des comparaisons détaillées</li>
     <li>Changez le mot de passe par défaut de votre routeur. Toute personne connectée à votre réseau WiFi est en mesure d'écouter le trafic réseau. Pour empêcher les personnes que vous ne connaissez pas de se connecter, utilisez WPA2 et définissez un mot de passe fort</li>
-  </ul> 
+  </ul>
   <div>
     <h3>🧠 Pour aller plus loin :</h3>
     <ul>
@@ -482,7 +482,7 @@ check_list_learning = Learning.create(
   duration: 12
 )
 gpdr_learning = Learning.create(
-  name: "Le RGPD",
+  name: 'Le RGPD',
   content: "<h1 style='text-align: center'>Le RGPD</h1>
 
   <div>
@@ -498,7 +498,7 @@ gpdr_learning = Learning.create(
     La protection des données à caractère personnel repose sur plusieurs piliers, en particulier : la transparence et la
     licité ; les droits des personnes physiques concernées ; la sécurité des données ; la limitation des finalités, la
     minimisation des données ; la pertinence et la durée de conservation d’une donnée.<br><br>
-  
+
     La sécurité des données constitue donc l’un des piliers essentiels de la protection des données à caractère personnel.
   </div>
   <h2>2. La sécurité des données dans le RGPD</h2>
@@ -511,12 +511,12 @@ gpdr_learning = Learning.create(
     notamment inclure le «chiffrement des données» et des «moyens permettant de garantir la confidentialité,
     l’intégrité, la disponibilité et la résilience».
   </div>
-  
+
   <h2>3. Quels sont mes droits ?</h2>
   <div>Grâce au RGPD, n’importe quel citoyen européen peut maintenant agir contre toute entreprise ne respectant pas la
     règlementation sur le traitement des données personnelles, et ce même si l’entreprise a son siège social à
     l’étranger.<br>
-  
+
   </div>
   <ul>
     <li> Le droit d’accès aux données : les personnes concernées ont le droit de demander aux responsables du traitement
@@ -538,7 +538,7 @@ gpdr_learning = Learning.create(
       données sont destinées à un profilage. Ce droit est surtout intéressant pour les salariés travaillant dans des
       entreprises dans l’usage de leur photo sur un trombinoscope par exemple.
     </li>
-  
+
   </ul>
   <h3>🧠 Pour aller plus loin :</h3>
   <ul>
@@ -556,7 +556,7 @@ social_engineering_learning = Learning.create(
     L'ingénierie sociale(social engineering en anglais) est, dans le contexte de la sécurité de l'information, une
     pratique de manipulation psychologique à des fins d'escroquerie. Les termes plus appropriés à utiliser sont le
     piratage psychologique ou la fraude psychologique.
-  
+
   </div>
   <h2>2. Comment vous en protéger ?</h2>
   <div>
@@ -585,7 +585,7 @@ social_engineering_learning = Learning.create(
     de connexion, au bureau comme à la maison. Si les tactiques d'ingénierie sociale aboutissent, le risque d'infection
     par des programmes malveillants est tout à fait probable.
   </div>
-  
+
   <h2>3. Quelques exemples en vidéo</h2>
   <div>
     <iframe width='420' height='345' src='https://www.youtube.com/watch?v=xuYoMs6CLEw&t=1s'>
@@ -595,7 +595,7 @@ social_engineering_learning = Learning.create(
   duration: 11
 )
 physical_security_learning = Learning.create(
-  name: "La sécurité physique",
+  name: 'La sécurité physique',
   content: "<h1 style='text-align: center'>La sécurité physique</h1>
 
   <h2>1. Introduction</h2>
@@ -611,7 +611,7 @@ physical_security_learning = Learning.create(
     <br><br>
     Sécurité logique et sécurité physique ne sont pas dissociables et doivent converger vers un seul but : la sécurité
     optimum du système d’information.
-  
+
   </div>
   <h2>2. Qu’entend-on par sécurité physique?</h2>
   <div>
@@ -631,8 +631,8 @@ physical_security_learning = Learning.create(
     <li> Lorsque cela est possible et nécessaire, un SAS de contrôle d’accès
     </li>
   </ul>
-  
-  
+
+
   <div>
     Bien que votre société mette en œuvre des barrières et politiques de sécurité physique, votre contribution est
     essentielle.
@@ -645,7 +645,7 @@ physical_security_learning = Learning.create(
   duration: 6
 )
 fingerprint_learning = Learning.create(
-  name: "Mon empreinte numérique",
+  name: 'Mon empreinte numérique',
   content: "<h1 style='text-align: center'>Mon empreinte numérique</h1>
 
   <h2>1. Qu'est-ce qu'une empreinte ? </h2>
@@ -655,7 +655,7 @@ fingerprint_learning = Learning.create(
     ce que vous publiez.
   </div>
   <h2>2. 10 Conseils pour limiter ses traces !</h2>
-  
+
   <ul>
     <li> Réfléchissez avant de poster : Sur internet, tout le monde peut voir ce que vous mettez en ligne : infos, photos,
       opinions.</li>
@@ -683,11 +683,11 @@ fingerprint_learning = Learning.create(
     <li> Contrôler votre empreinte : régulièrement n’hésitez pas à taper votre nom et prénom dans une barre de recherche
       de votre navigateur, cela vous permet de vérifier quelles informations facilement accessible circulent à votre
       propos sur Internet.</li>
-  
+
   </ul>
-  
+
   <h2>3. Mettre à jour son système</h2>
-  
+
   <div>
     La mise à jour régulière des logiciels et applications est cruciale afin de pallier tout risque de piratage et de
     traçage. Un programme obsolète s’avère une cible facile pour les malwares (logiciels malveillants) et les intrusions.
@@ -696,7 +696,7 @@ fingerprint_learning = Learning.create(
   duration: 6
 )
 usb_device_learning = Learning.create(
-  name: "Les appareils USB",
+  name: 'Les appareils USB',
   content: "<h1 style='text-align: center'>Les appareils USB</h1>
 
   <h2>1. Introduction</h2>
@@ -708,22 +708,22 @@ usb_device_learning = Learning.create(
   <div>
     Les périphériques USB font partie de notre quotidien, qu’il s’agisse de recharger nos appareils numériques, d’adaptateurs divers ou même des souris et claviers, tout se branche en USB. C’est simple, rapide et compatible avec tous les ordinateurs du marché. Cette simplicité et cette diffusion des ports USB en font une cible privilégiée pour les attaques à l’encontre du système d’information, et il est nécessaire de s’en prémunir. Il est à la fois impossible et impératif de s’en séparer, une solution intermédiaire doit être trouvée.
   </div>
-  
+
   <h2>Quelles sont les menaces ?</h2>
   <div>Les attaques contre les ports USB fonctionnent à deux niveaux : physique et logiciel. Les périphériques USB étant directement reliés, il est important de considérer la surface d’attaque crée par le lien physique et électronique.</div>
   <h3>Attaques physiques (hardware)</h3>
   <div>Par ce terme, j’entends toutes les menaces qui s’attaquent à la couche physique du support USB : une attaque qui fonctionnerait même si le système d’exploitation n’était pas capable d’interagir avec un port USB. Il y a quelques temps il existait, qu’une seule attaque possible, l'USBKill :une clé USB dont le seul but est de détruire l’ordinateur. Elle est composée de condensateurs qui se chargent grâce au courant transmis par l’ordinateur, et une fois une certaine tension atteinte, tout est renvoyé sur la carte mère, ce qui provoque une surtension et grille les composants.
-  
+
     Cette catégorie d’attaques fonctionne même si la session de l’utilisateur est verrouillée, et provoque des pertes massives de données et de matériel.
-    
+
     Ainsi, un appareil qui ressemble à une clé USB peut en fait être un appareil malicieux.</div>
     <h3>Attaques logicielles (software)</h3>
-  
+
   <div>
     J’inclus dans cette catégorie toutes les menaces qui peuvent corrompre le système d’exploitation, que ce soit en injectant un malware ou en interceptant/ex-filtrant des données.
-  
+
   Afin de comprendre les différentes menaces logicielles, il est important de comprendre tout ce qu’il est possible de faire avec le protocole USB. La liste des classes est fournie sur le site officiel usb.org.
-  
+
   Attention cependant, tout appareil USB peut être un appareil malicieux, qu’il s’agisse d’un smartphone, d’une cigarette électronique ou d’un chargeur par exemple. Restez vigilant et ne connectez pas d’appareil non reconnus sur vos appareils personnelles ou professionnels. N’acceptez pas les goodies USB dans les salons ou même ceux que vous pourriez trouver “par hasard”.
   </div>
   <h3>🧠 Pour aller plus loin :</h3>
@@ -732,7 +732,7 @@ usb_device_learning = Learning.create(
   duration: 8
 )
 ransomwares_learning = Learning.create(
-  name: "Les rançongiciels ou ransomwares",
+  name: 'Les rançongiciels ou ransomwares',
   content: "<h1 style='text-align: center'>Les rançongiciels (ransomwares)</h1>
 
   <h2>1. Introduction</h2>
@@ -740,7 +740,7 @@ ransomwares_learning = Learning.create(
     Pour commencer : Comprendre les ransomwares en 5 minutes<br><br>
     <iframe width='420' height='345' src='https://www.youtube.com/watch?v=G_lFrgwjw9E'></iframe>
   </div>
-  
+
   <h2>2. Définition.</h2>
   <div>
     Un ransomware est un type de programme malveillant conçu pour pirater les ordinateurs et forcer les victimes à payer
@@ -766,7 +766,7 @@ ransomwares_learning = Learning.create(
       ransomware Crypto peut s’avérer dévastateur et pousser de nombreuses victimes à payer la rançon dans l’espoir de
       récupérer leurs documents numériques.</li>
   </ul>
-  
+
   <div>Le premier programme malveillant de rançon moderne a vu le jour en 2005 avec Trojan.Gpcoder. En 2015, plus de 58%
     des PC des entreprises ont été attaqués par des programmes malveillants, et les attaques de CryptoLocker ont doublé,
     (selon Kaspersky Lab). Le ransomware Locker représente près de 20% des ransomware. Selon Softpedia, le nombre
@@ -774,8 +774,8 @@ ransomwares_learning = Learning.create(
     et les créateurs de codes de rançon.</div>
   <div>Lorsqu'il s'agit de se protéger contre les ransomwares, il vaut mieux prévenir que guérir. Pour y parvenir, il est
     essentiel de faire preuve de vigilance. Et d'utiliser le bon logiciel de sécurité.</div>
-  
-  
+
+
   <div>
     Les analyses de vulnérabilité peuvent également vous aider à trouver des intrus dans votre système. Tout d'abord, il
     est important de s'assurer que votre ordinateur n'est pas une cible idéale pour les ransomwares. Les logiciels des
@@ -785,14 +785,14 @@ ransomwares_learning = Learning.create(
     pièces jointes des emails. Cependant, même les meilleures mesures préventives peuvent échouer, ce qui rend d'autant
     plus indispensable l'existence d'un plan d'urgence. Dans le cas des ransomwares, un plan d'urgence consiste à disposer
     d'une sauvegarde de vos données.</div>
-  
+
   <h3>🧠 Pour aller plus loin :</h3>
   <li><a href='https://www.ssi.gouv.fr/uploads/2020/09/anssi-guide-attaques_par_rancongiciels_tous_concernes-v1.0.pdf' target='_blank'>Le guide de l'ANSSI concernant les rançongiciels.</a>
   </li>",
   duration: 9
 )
 incident_crisis_learning = Learning.create(
-  name: "Gérer un incident de sécurité",
+  name: 'Gérer un incident de sécurité',
   content: "<h1 style='text-align: center'>Gérer un incident de sécurité</h1>
 
   <h2>1. Que faire en cas d’incident ?</h2>
@@ -848,13 +848,13 @@ incident_crisis_learning = Learning.create(
       communications externes et faire appel aux autres équipes compétentes (juridique, RH, sécurité, etc.)</li>
   </ul>
   <h2>3. Et après ? </h2>
-  
+
   <div>
     Après l’incident : réinstallez complètement le système d’exploitation à partir d’une version saine, supprimez tous les
     services inutiles, restaurez les données d’après une copie de sauvegarde non compromise, et changez tous les mots de
     passe du système d’information.
   </div>
-  
+
   <h3>🧠 Pour aller plus loin :</h3>
   <li>
     <a href='https://www.ssi.gouv.fr/en-cas-dincident/' target='_blank'>Le guide de l'ANSSI concernant la gestion des
@@ -875,108 +875,98 @@ offer_essential = Offer.create(
 )
 offer_excelcium = Offer.create(
   name: 'Offre Excelcium',
-  description: "Elle vous garantie une formation optimale de vos collaborateurs. Elle comprend une formation par mois."
+  description: 'Elle vous garantie une formation optimale de vos collaborateurs. Elle comprend une formation par mois.'
 )
 
-2.times do |i|
+2.times do |_i|
   purchase = Purchase.create(
     offer_id: Offer.all.sample.id,
     company_id: Company.all.sample.id
   )
 end
 
-#DB for offer_learning
-offer_learning1 = offer_learning = OfferLearning.create(
-    learning_id: password_learning.id,
-    offer_id: offer_light.id
+# DB for offer_learning
+offer_learning1 = OfferLearning.create(
+  learning_id: password_learning.id,
+  offer_id: offer_light.id
 )
-offer_learning2 = offer_learning = OfferLearning.create(
+offer_learning2 = OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_light.id
 )
 
-
-offer_learning3 = offer_learning = OfferLearning.create(
+offer_learning3 = OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_essential.id
 )
-offer_learning4 = offer_learning = OfferLearning.create(
+offer_learning4 = OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_essential.id
 )
-offer_learning5 = offer_learning = OfferLearning.create(
+offer_learning5 = OfferLearning.create(
   learning_id: separation_of_uses_learning.id,
   offer_id: offer_essential.id
 )
-offer_learning6 = offer_learning = OfferLearning.create(
+offer_learning6 = OfferLearning.create(
   learning_id: travel_security_learning.id,
   offer_id: offer_essential.id
 )
 
-offer_learning7 = offer_learning = OfferLearning.create(
+offer_learning7 = OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning8 = offer_learning = OfferLearning.create(
+offer_learning8 = OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning9 = offer_learning = OfferLearning.create(
+offer_learning9 = OfferLearning.create(
   learning_id: separation_of_uses_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning10 = offer_learning = OfferLearning.create(
+offer_learning10 = OfferLearning.create(
   learning_id: travel_security_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning11 = offer_learning = OfferLearning.create(
+offer_learning11 = OfferLearning.create(
   learning_id: check_list_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning12 = offer_learning = OfferLearning.create(
+offer_learning12 = OfferLearning.create(
   learning_id: gpdr_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning13 = offer_learning = OfferLearning.create(
+offer_learning13 = OfferLearning.create(
   learning_id: social_engineering_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning14 = offer_learning = OfferLearning.create(
+offer_learning14 = OfferLearning.create(
   learning_id: physical_security_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning15 = offer_learning = OfferLearning.create(
+offer_learning15 = OfferLearning.create(
   learning_id: incident_crisis_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning16 = offer_learning = OfferLearning.create(
+offer_learning16 = OfferLearning.create(
   learning_id: fingerprint_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning17 = offer_learning = OfferLearning.create(
+offer_learning17 = OfferLearning.create(
   learning_id: usb_device_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning18 = offer_learning = OfferLearning.create(
+offer_learning18 = OfferLearning.create(
   learning_id: ransomwares_learning.id,
   offer_id: offer_excelcium.id
 )
 
 
-
-# 15.times do |i|
-#   assignment = Assignment.create(
-#     learning_id: Learning.all.sample.id,
-#     user_id: User.all.sample.id
-#   )
-# end
-
-
-
 # create a customer for tests
-cust1  = User.create(email: "therealcustomer@yopmail.com", password: 'password', password_confirmation: 'password', status: 1)
+cust1 = User.create(email: 'therealcustomer@yopmail.com', password: 'password', password_confirmation: 'password',
+                    status: 1)
 comp1 = Company.create(
-  name: 'test engine',
+  name: 'test engine'
 )
 
 UserCompany.create(user: cust1, company: comp1)

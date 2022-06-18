@@ -3,10 +3,6 @@ class AssignmentsController < ApplicationController
     @assignments = Assignment.all
   end
 
-  def show
-    @assignment = Assignment.find(params[:id])
-  end
-
   def new
     @assignment = Assignment.new
   end
@@ -37,9 +33,8 @@ class AssignmentsController < ApplicationController
     @assignment.destroy
 
     respond_to do |format|
-      format.html { redirect_to company_path, notice: "Désinscription réussie" }
+      format.html { redirect_to company_path, notice: 'Désinscription réussie' }
       format.js {}
     end
   end
-
 end
