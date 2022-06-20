@@ -268,3 +268,40 @@
    }
     
 /* SIDEBAR END */
+
+/* COMPAGNY SHOW */
+
+ .grid-compagny > div {
+    border: 1px solid #22242e;
+    background-color: rgb(110, 110, 110);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .grid-compagny {
+     display: flex;
+     margin-top: 4em;
+     display: grid;
+     grid-template-columns: 30% 30% 30%;
+     grid-template-rows: 5em 15em;
+ }
+
+.grid1 {
+    border-radius: 20px 20px 0 0;
+ }
+
+ .grid2 {
+    border-radius: 20px 20px 0 0;
+ }
+
+ .grid3 {
+    border-radius: 20px 20px 0 0;
+ }
+
+ .grid-render {
+     grid-column-start: 1;
+     grid-column-end: 4;
+     border-radius: 0 0 20px 20px;
+ }
+/* COMPAGNY SHOW END */
