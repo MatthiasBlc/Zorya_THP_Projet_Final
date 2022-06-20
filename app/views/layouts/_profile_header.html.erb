@@ -1,5 +1,7 @@
 <div class="jumbotron">
-  <h1>Zorya, votre plateforme e-learning</h1>
-  <p class="lead">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-  <hr class="my-4">
+<% if user_signed_in? && current_user.first_name != nil %>
+   <h1 class="text-center"><%= current_user.first_name %>,<br> Bienvenue sur Zorya, votre plateforme e-learning.</h1>
+<% else %>
+    <h1>Bienvenue sur Zorya, votre plateforme e-learning</h1>
+<% end %>
 </div>
