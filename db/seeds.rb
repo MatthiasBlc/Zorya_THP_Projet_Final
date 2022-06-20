@@ -963,7 +963,7 @@ offer_learning18 = OfferLearning.create(
 
 
 # create a customer for tests
-cust1 = User.create(email: 'therealcustomer@yopmail.com', password: 'password', password_confirmation: 'password',
+cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcustomer@yopmail.com', password: 'password', password_confirmation: 'password',
                     status: 1)
 comp1 = Company.create(
   name: 'test engine'
