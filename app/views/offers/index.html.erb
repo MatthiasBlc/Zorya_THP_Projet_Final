@@ -56,7 +56,7 @@
         <div class=" d-flex flex-row justify-content-between flex-wrap">
           <% @offers.each do |offer| %>
             <div class="card" style="width: 18rem;">
-              <%= image_tag('photoshop_200x168.png', class: 'card-img-top', alt: 'package-photo') %>
+              <%= image_tag(offer.photo, class: 'card-img-top', alt: 'package-photo') %>
               <div class="card-body">
                 <h5 class="card-title"><%= offer.name %></h5>
                 <br>

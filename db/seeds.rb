@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'aws-sdk-s3'
+s3 = Aws::S3::Resource.new(region: 'eu-west-3')
+
 UserCompany.destroy_all
 Assignment.destroy_all
 OfferLearning.destroy_all
@@ -868,15 +871,29 @@ incident_crisis_learning = Learning.create(
 offer_light = Offer.create(
   name: 'Offre Light',
   description: 'Le minimum pour sensibiliser de vos collaborateurs. Elle comprend une formation par semestre.'
-)
+  )
+
+obj = s3.bucket('zoryaprojetfinal').object("light.png")
+obj.get(response_target: "app/assets/images/light.png")
+offer_light.photo.attach(io: File.open("app/assets/images/light.png"), filename: "light.png")
+
 offer_essential = Offer.create(
   name: 'Offre Essential',
   description: 'Notre solution médiane, pour une sensibilisation continue de vos collaborateurs. Elle comprend une formation par trimestre.'
-)
+  )
+
+obj = s3.bucket('zoryaprojetfinal').object("essential.png")
+obj.get(response_target: "app/assets/images/essential.png")
+offer_essential.photo.attach(io: File.open("app/assets/images/essential.png"), filename: "essential.png")
+
 offer_excelcium = Offer.create(
   name: 'Offre Excelcium',
   description: 'Elle vous garantie une formation optimale de vos collaborateurs. Elle comprend une formation par mois.'
-)
+  )
+
+obj = s3.bucket('zoryaprojetfinal').object("excelcium.png")
+obj.get(response_target: "app/assets/images/excelcium.png")
+offer_excelcium.photo.attach(io: File.open("app/assets/images/excelcium.png"), filename: "excelcium.png")
 
 2.times do |_i|
   purchase = Purchase.create(
