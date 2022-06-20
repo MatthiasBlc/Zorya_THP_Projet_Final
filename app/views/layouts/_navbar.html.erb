@@ -1,25 +1,27 @@
 <div class="navbar navbar-expand pr-0 navbar-dark border-bottom-2"
                      id="default-navbar"
                      data-primary>
-  <!-- Navbar Toggler -->
-  <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0"
-                            type="button"
-                            data-toggle="sidebar">
-    <span class="material-icons">short_text</span>
-  </button>
-  <%= button_tag( :class => "navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0", :type => "button", :data_toggle => "sidebar") do %>
-    short text <span class="material-icons"></span>
-  <% end %>
-  <!-- // END Navbar Toggler -->
   <!-- Navbar Brand -->
-  <a href="index.html"
-                       class="navbar-brand mr-16pt d-lg-none">
+  <%= link_to root_path,  class:"navbar-brand mr-16pt d-lg-none"  do %>
     <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
-      <span class="rounded bg-primary"><%= image_tag('white.svg', class: 'img-fluid', alt: 'logo') %></span>
+      <span class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', alt: 'logo') %></span>
     </span>
     <span class="d-none d-lg-block">Luma</span>
-  </a>
+  <% end %>
   <!-- // END Navbar Brand -->
+  <!-- Navbar Toggler -->
+  <% if user_signed_in? %>
+    <%= button_tag( :class => "navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0", :type => "button", :data_toggle => "sidebar", )  do %>
+      <%= link_to "Mes formations", user_assignments_path(current_user.id) %><span class="material-icons"></span>
+    <% end %>
+    <% if current_user.status_customer? %>
+      <%= button_tag( :class => "navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0", :type => "button", :data_toggle => "sidebar") do %>
+        <%= link_to "Mon espace entreprise", company_path(current_user.company.id) %><span class="material-icons"></span>
+      <% end %>
+    <% end %>
+  <% else %>
+  <% end %>
+  <!-- // END Navbar Toggler -->
   <div class="flex"></div>
   <!-- Navbar Menu -->
   <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">

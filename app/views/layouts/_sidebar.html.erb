@@ -15,12 +15,13 @@
           <% end %>
         </form>
       </div>
-      <a href="index.html"
-                           class="sidebar-brand ">
+
+                           <%= link_to root_path,  class:"sidebar-brand"  do %>
         <span class="avatar avatar-xl sidebar-brand-icon h-auto">
           <div class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', alt: 'logo') %></div>
         </span>
-      </a>
+               <% end %>
+
       <div class="sidebar-container">
         <span class="sidebar-text">
           <% if user_signed_in? %>
