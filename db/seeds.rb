@@ -868,15 +868,23 @@ incident_crisis_learning = Learning.create(
 offer_light = Offer.create(
   name: 'Offre Light',
   description: 'Le minimum pour sensibiliser de vos collaborateurs. Elle comprend une formation par semestre.'
-)
+  )
+
+offer_light.photo.attach(io: File.open("app/assets/images/light.png"), filename: "light.png")
+
 offer_essential = Offer.create(
   name: 'Offre Essential',
   description: 'Notre solution médiane, pour une sensibilisation continue de vos collaborateurs. Elle comprend une formation par trimestre.'
-)
+  )
+
+offer_essential.photo.attach(io: File.open("app/assets/images/essential.png"), filename: "essential.png")
+
 offer_excelcium = Offer.create(
   name: 'Offre Excelcium',
   description: 'Elle vous garantie une formation optimale de vos collaborateurs. Elle comprend une formation par mois.'
-)
+  )
+
+offer_excelcium.photo.attach(io: File.open("app/assets/images/excelcium.png"), filename: "excelcium.png")
 
 2.times do |_i|
   purchase = Purchase.create(
