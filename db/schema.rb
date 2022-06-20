@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_16_144752) do
+ActiveRecord::Schema.define(version: 2022_06_20_132059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_144752) do
     t.bigint "learning_id"
     t.bigint "user_id"
     t.index ["learning_id"], name: "index_assignments_on_learning_id"
+    t.index ["user_id", "learning_id"], name: "by_user_and_learning", unique: true
     t.index ["user_id"], name: "index_assignments_on_user_id"
   end
 
