@@ -1,1 +1,2 @@
-alert("le fichier JS est exécuté!");
+<%= id = "user_list" %>
+document.getElementById("<%= id %>").insertAdjacentHTML("beforeend", "<%= j render 'new_user', user: @user %>")
