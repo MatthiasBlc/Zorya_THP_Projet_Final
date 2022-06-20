@@ -27,6 +27,7 @@ class UserCompaniesController < ApplicationController
 
   def destroy
     @user_companies = UserCompany.find(params[:id])
+    @user = @user_companies.user
     @user_companies.destroy
 
     respond_to do |format|
