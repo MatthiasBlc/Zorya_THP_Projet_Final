@@ -1,60 +1,13 @@
 <h1>Mon entreprise</h1>
 <h1>Gestion des users</h1>
 <div class="">
-  <div id= "user_list" class="">
-    <% @users.each do |user| %>
-      <% if user == current_user %>
-      <% else %>
-        <div id= "user_<%= user.id %>" class="">
-          <h5>Utilisateur: <%= user.email %></h5>
-          <div>
-            <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, company_id: @company.id}, method: :delete, class: "form-btn" %>
-          </div>
-          <hr class="">
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-  <div>
-    <p>ajouter un user</p>
-    <%= form_tag user_companies_path, method: 'post', remote: true do %>
-      <%= hidden_field_tag :company_id , @company.id %>
-      <%= email_field_tag 'email' %>
-      <%= submit_tag "submit"%>
-    <% end %>
-  </div>
+  <%= render 'company_user' %>
 </div>
 <h1>Gestion des learnings</h1>
 <div class="">
-  <% @learnings.each do |learning| %>
-    <div class="">
-      <h5>Learning: <%= learning.name %></h5>
-      <div>
-        <% @users.each do |user| %>
-          <h6><%= user.email %>
-            <div id= "inscription_button_<%= learning.id %>_<%= user.id %>" class="">
-              <%if user.learnings.include?(learning)%>
-                <%= button_to "désinscrire", user_assignment_path(user.id, 
-             @assignments.find_by(user_id: user.id, learning_id: learning.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, learning_id: learning.id}, method: :delete, class: "form-btn" %>
-              <% else %>
-                <%= button_to 'inscrire', user_assignments_path(user.id), remote: true, params: {user_id: user.id, learning_id: learning.id} ,method: :post, class: "" %>
-              <% end %>
-            </div>
-          </h6>
-        <% end %>
-      </div>
-    </div>
-    <hr class="">
-  <% end %>
+  <%= render 'company_learnings' %>
 </div>
 <h1>Index de ses offers</h1>
 <div class="">
-  <% @offers.each do |offer| %>
-    <% if @company.offers.include?(offer) %>
-      <h5>offre: <%= offer.name %></h5>
-    <% else %>
-      <h5>offre: <%= offer.name %> /non disponible</h5>
-    <% end %>
-    <hr class="">
-  <% end %>
+  <%= render 'company_offers' %>
 </div>
