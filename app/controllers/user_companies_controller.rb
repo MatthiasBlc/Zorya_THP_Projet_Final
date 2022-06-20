@@ -7,13 +7,13 @@ class UserCompaniesController < ApplicationController
     @user = User.find_by(email: params[:email])
     @company = Company.find(params[:company_id])
     @user_companies = UserCompany.all
-    @list_of_user_id = []
+    @list_user_company_of_user_id = []
 
     @user_companies.each do |user_company|
-      @list_of_user_id << user_company.user_id
+      @list_user_company_of_user_id << user_company.user_id
     end
 
-    if @list_of_user_id.include?(@user.id)
+    if @list_user_company_of_user_id.include?(@user.id)
       flash[:danger] = "cet utilisateur est déjà rataché à une entreprise ou n'existe pas."
     else
       @user_company = UserCompany.create(user_id: @user.id, company_id: @company.id)

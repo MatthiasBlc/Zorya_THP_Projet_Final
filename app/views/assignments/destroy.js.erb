@@ -1,1 +1,2 @@
-alert("le fichier JS est exécuté!");
+<%= id = "inscription_button_#{@learning.id}" %>
+document.getElementById("<%= id %>").innerHTML = "<%= j render 'inscription_button', user: @user, learning:@learning %>";
