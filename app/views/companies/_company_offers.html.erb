@@ -1,0 +1,8 @@
+<% @offers.each do |offer| %>
+  <% if @company.offers.include?(offer) %>
+    <h5>offre: <%= offer.name %></h5>
+  <% else %>
+    <h5>offre: <%= offer.name %> /non disponible</h5>
+  <% end %>
+  <hr class="">
+<% end %>
