@@ -1,2 +1,2 @@
-<%= id = "inscription_button_#{@learning.id}" %>
+<%= id = "inscription_button_#{@learning.id}_#{@user.id}" %>
 document.getElementById("<%= id %>").innerHTML = "<%= j render 'inscription_button', user: @user, learning:@learning %>";
