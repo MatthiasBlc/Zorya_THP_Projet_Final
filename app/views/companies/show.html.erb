@@ -2,13 +2,16 @@
 <h1>Gestion des users</h1>
 <div class="">
   <% @users.each do |user| %>
-    <div class="">
-      <h5>Utilisateur: <%= user.email %></h5>
-      <div>
-        <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, company_id: @company.id}, method: :delete, class: "form-btn" %>
+    <% if user == current_user %>
+    <% else %>
+      <div class="">
+        <h5>Utilisateur: <%= user.email %></h5>
+        <div>
+          <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, company_id: @company.id}, method: :delete, class: "form-btn" %>
+        </div>
       </div>
-    </div>
-    <hr class="">
+      <hr class="">
+    <% end %>
   <% end %>
   <div>
     <p>ajouter un user</p>
