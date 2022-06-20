@@ -1,9 +1,4 @@
-  <% puts '$'*120 %>
-  <% puts @user.inspect %>
-    <% puts @learning.inspect %>
-    <% puts '$'*120 %>
-  
-  <%if @user.learnings.include?(@learning)%>
+<%if @user.learnings.include?(@learning)%>
   <%= button_to "désinscrire", user_assignment_path(@user.id, 
              @assignments.find_by(user_id: @user.id, learning_id: @learning.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: @user.id, learning_id: @learning.id}, method: :delete, class: "form-btn" %>
 <% else %>
