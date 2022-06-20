@@ -39,6 +39,8 @@
         <%= render 'layouts/navbar' %>
         <% if current_page?(root_path) %>
           <%= render 'layouts/header' %>
+        <% elsif user_signed_in? && current_page?(user_path) %>
+          <%= render 'layouts/profile_header' %>
         <% end %>
         <div class="container page__container flex d-flex my-32pt">
           <div class="" style="width: 100%">
@@ -56,7 +58,6 @@
       <!-- // END Sidebar Content -->
       <% if user_signed_in? %>
         <%= render 'layouts/sidebar' %>
-      <% else %>
       <% end %>
       <!-- // END Drawer -->
     </div>
