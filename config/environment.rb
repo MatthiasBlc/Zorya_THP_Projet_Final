@@ -12,3 +12,10 @@ ActionMailer::Base.smtp_settings =   {
   :user_name          => ENV['MAILJET_API'],
   :password           => ENV['MAILJET_KEY']
 }
+
+def slack_notifier(webhook, channel)
+  Slack::Notifier.new webhook do
+    defaults channel: channel,
+             username: "notifier"
+  end
+end
