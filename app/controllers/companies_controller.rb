@@ -11,6 +11,8 @@ class CompaniesController < ApplicationController
     @assignments = Assignment.all
     @offers = Offer.all
     @user_companies = UserCompany.all
+
+  
   end
 
   def learnings
