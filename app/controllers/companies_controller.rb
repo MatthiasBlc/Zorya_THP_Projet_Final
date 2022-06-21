@@ -13,6 +13,45 @@ class CompaniesController < ApplicationController
     @user_companies = UserCompany.all
   end
 
+  def learnings
+    @company = Company.find(params[:id])
+    @learnings = @company.learnings
+    @users = @company.users
+    @assignments = Assignment.all
+
+    respond_to do |format|
+      format.html { redirect_to company_path }
+      format.js
+    end
+  end
+
+  def offers
+    @company = Company.find(params[:id])
+    @learnings = @company.learnings
+    @users = @company.users
+    @offers = Offer.all
+    @assignments = Assignment.all
+
+    respond_to do |format|
+      format.html { redirect_to company_path }
+      format.js
+    end
+  end
+
+  def users
+    @company = Company.find(params[:id])
+    @learnings = @company.learnings
+    @users = @company.users
+    @offers = Offer.all
+    @assignments = Assignment.all
+    @user_companies = UserCompany.all
+
+    respond_to do |format|
+      format.html { redirect_to company_path }
+      format.js
+    end
+  end
+
   private
 
   def customer
