@@ -1,8 +1,10 @@
-<% @offers.each do |offer| %>
-  <% if @company.offers.include?(offer) %>
-    <h5>offre: <%= offer.name %></h5>
-  <% else %>
-    <h5>offre: <%= offer.name %> /non disponible</h5>
+<div class="d-flex flex-column">
+  <% @offers.each do |offer| %>
+    <% if @company.offers.include?(offer) %>
+      <h5>offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-check-circle fa-1x text-success"></i></h5>
+    <% else %>
+      <h5>offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-x-circle fa-1x text-danger"></i></h5>
+    <% end %>
+    <hr class="">
   <% end %>
-  <hr class="">
-<% end %>
+</div>

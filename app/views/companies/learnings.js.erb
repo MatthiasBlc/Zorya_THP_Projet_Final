@@ -1,3 +1,5 @@
   <%= id = "company_render" %>
 document.getElementById("<%= id %>").innerHTML = ""
 document.getElementById("<%= id %>").insertAdjacentHTML("beforeend", "<%= j render 'company_learnings', user: @user, company: @company %>")
+
+    

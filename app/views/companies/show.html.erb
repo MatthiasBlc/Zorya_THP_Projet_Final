@@ -2,19 +2,14 @@
 <div class="d-flex flex-column justify-content-center">
   <div class="grid-compagny">
     <div id="company_users" class="grid1">
-      <%= form_tag users_company_path, method: :get,  :remote => true do %>
-        <%= submit_tag 'GESTION DES USERS' %>
-      <% end %>
+      <%= link_to 'GESTION DES USERS', users_company_path, method: :get, id: 'btn1', class: 'btn btn-compagny', remote: true %>
     </div>
     <div id="company_learnings" class="grid2">
-      <%= form_tag learnings_company_path, method: :get,  :remote => true do %>
-        <%= submit_tag 'GESTION DES LEARNINGS' %>
-      <% end %>
+      <%= link_to 'GESTION DES LEARNINGS', learnings_company_path, method: :get, class: 'btn btn-compagny',  remote: true %>
     </div>
     <div id="company_offers" class="grid3">
-      <%= form_tag offers_company_path, method: :get,  :remote => true do %>
-        <%= submit_tag 'INDEX DES OFFERS' %>
-      <% end %>
+      <%= link_to 'INDEX DES OFFERS', offers_company_path, method: :get, class: 'btn btn-compagny',  remote: true %>
     </div>
-    <div id="company_render" class="grid-render"><%= render 'company_users' %></div>
+    <div id="company_render" class="grid-render"><%= render 'company_users', class: 'btn btn-compagny' %></div>
   </div>
+</div>

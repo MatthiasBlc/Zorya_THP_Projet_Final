@@ -281,8 +281,7 @@
 /* COMPAGNY SHOW */
 
  .grid-compagny > div {
-    border: 1px solid #22242e;
-    background-color: rgb(110, 110, 110);
+    border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -293,24 +292,49 @@
      margin-top: 4em;
      display: grid;
      grid-template-columns: 30% 30% 30%;
-     grid-template-rows: 5em 15em;
+     grid-template-rows: 5em auto;
  }
 
 .grid1 {
     border-radius: 20px 20px 0 0;
+    background-color: #939eff;
  }
 
  .grid2 {
     border-radius: 20px 20px 0 0;
+    background-color: #5567ff;
  }
 
  .grid3 {
     border-radius: 20px 20px 0 0;
+    background-color: #2936a6;
  }
 
  .grid-render {
+     background-color: #939eff;
      grid-column-start: 1;
      grid-column-end: 4;
-     border-radius: 0 0 20px 20px;
+     border-radius: 0 20px 20px 20px;
+     padding-top: 2em;
  }
+
+ .compagny-learning-card {
+     background-color: rgb(59, 59, 59);
+     margin-bottom: 2em;
+ }
+
+ .compagny-learning-each {
+    background-color: rgb(189, 189, 189);
+}
+
+.btn-compagny {
+    background-color: none !important;
+    color: rgb(227, 227, 227) !important;
+    font-size: 16px !important;
+}
+
+.btn-compagny:hover {
+    color: white !important;
+    
+} 
 /* COMPAGNY SHOW END */
