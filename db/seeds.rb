@@ -1019,3 +1019,5 @@ comp1 = Company.create(
 
 UserCompany.create(user: cust1, company: comp1)
 Purchase.create(company: comp1, offer: offer_essential)
+
+
