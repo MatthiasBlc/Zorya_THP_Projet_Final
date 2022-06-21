@@ -1,12 +1,21 @@
 <h2 class="text-center">Mon espace entreprise</h2>
-
 <div class="d-flex flex-column justify-content-center">
-
   <div class="grid-compagny">
-    <div class="grid1"><h3>GESTION DES USERS</h3></div>
-    <div class="grid2"><h3>GESTION DES LEARNINGS</h3></div>
-    <div class="grid3"><h3>INDEX DES OFFERS</h3></div>
-    <div class="grid-render">! render !</div>
+    <div id="company_users" class="grid1">
+      <%= form_tag users_company_path, method: :get,  :remote => true do %>
+        <%= submit_tag 'GESTION DES USERS' %>
+      <% end %>
+    </div>
+    <div id="company_learnings" class="grid2">
+      <%= form_tag learnings_company_path, method: :get,  :remote => true do %>
+        <%= submit_tag 'GESTION DES LEARNINGS' %>
+      <% end %>
+    </div>
+    <div id="company_offers" class="grid3">
+      <%= form_tag offers_company_path, method: :get,  :remote => true do %>
+        <%= submit_tag 'INDEX DES OFFERS' %>
+      <% end %>
+    </div>
+    <div id="company_render" class="grid-render"><%= render 'company_users' %></div>
   </div>
-
 </div>
