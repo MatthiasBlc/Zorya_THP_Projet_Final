@@ -15,6 +15,25 @@ class CompaniesController < ApplicationController
   
   end
 
+  def edit
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:id])
+    puts "*"*120
+    puts params[:company][:channel].inspect
+    puts "*"*120
+
+    if @company.update(channel: params[:company][:channel], webhook: params[:company][:webhook])
+       @company.save
+       redirect_to company_path(params[:id])
+    else
+      flash[:danger] = "Des informations sont manquantes"
+      redirect_to company_path(params[:id])
+    end
+  end
+
   def learnings
     @company = Company.find(params[:id])
     @learnings = @company.learnings
