@@ -1,23 +1,26 @@
-  <div id= "user_list" class="">
-  <% @users.each do |user| %>
-    <% if user == current_user %>
-    <% else %>
-      <div id= "user_<%= user.id %>" class="">
-        <h5>Utilisateur: <%= user.email %></h5>
-        <div>
-          <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, company_id: @company.id}, method: :delete, class: "form-btn" %>
-        </div>
-        <hr class="">
-      </div>
+<div class="d-flex flex-column">
+  <div>
+    <span>Ajouter un user</span>
+    <%= form_tag user_companies_path, method: 'post', remote: true do %>
+      <%= hidden_field_tag :company_id , @company.id  %>
+      <%= email_field_tag 'email', nil, class: 'fill-field' %>
+      <%= button_tag( :class => "btn btn-secondary", :type => "submit" ) do %> Ajouter
+                                  <% end %>
     <% end %>
-  <% end %>
-</div>
-<div>
-  <span>Ajouter un user</span>
-  <%= form_tag user_companies_path, method: 'post', remote: true do %>
-    <%= hidden_field_tag :company_id , @company.id  %>
-    <%= email_field_tag 'email', nil, class: 'fill-field' %>
-    <%= button_tag( :class => "btn btn-secondary", :type => "submit" ) do %> Ajouter
-                                <% end %>
-  <% end %>
+  </div>
+
+    <div id= "user_list" class="">
+    <% @users.each do |user| %>
+      <% if user == current_user %>
+      <% else %>
+        <div id= "user_<%= user.id %>" class="">
+          <h5>Utilisateur: <%= user.email %></h5>
+          <div>
+            <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, company_id: @company.id}, method: :delete, class: "form-btn" %>
+          </div>
+          <hr class="">
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
