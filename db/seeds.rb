@@ -1014,9 +1014,7 @@ offer_learning18 = OfferLearning.create(
 cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcustomer@yopmail.com', password: 'password', password_confirmation: 'password',
                     status: 1)
 comp1 = Company.create(
-  name: 'test engine',
-  webhook: ENV['WEBHOOK_TEST'],
-  channel: '#général'
+  name: 'test engine'
 )
 
 UserCompany.create(user: cust1, company: comp1)
