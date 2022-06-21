@@ -2,7 +2,7 @@
 <div class=" d-flex flex-row justify-content-between flex-wrap">
   <% @assignments.each do |assignment|%>
     <div class="card" style="width: 18rem;">
-      <%= image_tag('photoshop_200x168.png', class: 'card-img-top', alt: 'package-photo') %>
+      <%= image_tag(assignment.learning.photo , class: 'card-img-top', alt: 'package-photo') %>
       <div class="card-body">
         <% if current_user.assignments.include?(assignment) %>
           <h5 class="card-title text-center mb-4"><%= assignment.learning.name %></h5>
