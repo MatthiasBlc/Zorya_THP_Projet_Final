@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   resources :user_companies
 
   scope(path_names: { show: 'entreprise' }) do
-    resources :companies, path: 'entreprise'
+    resources :companies, path: 'entreprise' do
+      get :learnings, on: :member
+      get :offers, on: :member
+      get :users, on: :member
+    end
   end
 
   resources :contacts, only: %i[new create] do

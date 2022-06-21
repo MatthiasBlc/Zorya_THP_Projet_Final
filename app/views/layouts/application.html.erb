@@ -7,9 +7,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
     <%= stylesheet_link_tag    'spinkit', media: 'all' %>
-
     <%= favicon_link_tag asset_path('faviconZorya.png') %>
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots"
@@ -76,5 +74,7 @@
     <%= javascript_include_tag 'material-design-kit' %>
     <!-- App JS -->
     <%= javascript_include_tag 'app' %>
+    <!-- global app JS -->
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
