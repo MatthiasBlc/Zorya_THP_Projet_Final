@@ -1014,8 +1014,12 @@ offer_learning18 = OfferLearning.create(
 cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcustomer@yopmail.com', password: 'password', password_confirmation: 'password',
                     status: 1)
 comp1 = Company.create(
-  name: 'test engine'
+  name: 'test engine',
+  webhook: 'https://hooks.slack.com/services/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',
+  channel: '#général'
 )
 
 UserCompany.create(user: cust1, company: comp1)
 Purchase.create(company: comp1, offer: offer_essential)
+
+
