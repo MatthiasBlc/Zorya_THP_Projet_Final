@@ -1015,7 +1015,7 @@ cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcu
                     status: 1)
 comp1 = Company.create(
   name: 'test engine',
-  webhook: 'https://hooks.slack.com/services/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',
+  webhook: 'https://hooks.slack.com/services/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',
   channel: '#général'
 )
 
