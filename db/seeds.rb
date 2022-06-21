@@ -24,6 +24,19 @@ User.destroy_all
   )
 end
 
+# Get img password 
+obj = s3.bucket('zoryaprojetfinal').object("password.png")
+obj.get(response_target: "app/assets/images/password.png")
+# Get img fishing
+obj = s3.bucket('zoryaprojetfinal').object("fishing.png")
+obj.get(response_target: "app/assets/images/fishing.png")
+# Get img BYOD (separation of uses )
+obj = s3.bucket('zoryaprojetfinal').object("BYOD.png")
+obj.get(response_target: "app/assets/images/BYOD.png")
+# Get img buisness trips (travel_security_learning)
+obj = s3.bucket('zoryaprojetfinal').object("buisnessTrips.png")
+obj.get(response_target: "app/assets/images/buisnessTrips.png")
+
 # DB for learnings
 password_learning = Learning.create(
   name: 'Les mots de passe',
@@ -107,6 +120,8 @@ password_learning = Learning.create(
   </div>",
   duration: 6
 )
+password_learning.photo.attach(io: File.open("app/assets/images/password.png"), filename: "password.png")
+
 phishing_learning = Learning.create(
   name: "L'hammeçonnage ou phishing",
   content: "<h1 style='text-align: center'>L'hammeçonnage ou phishing</h1>
@@ -244,6 +259,8 @@ phishing_learning = Learning.create(
   que les conséquences sont parfois irréversibles.<br>",
   duration: 8
 )
+phishing_learning.photo.attach(io: File.open("app/assets/images/fishing.png"), filename: "fishing.png")
+
 separation_of_uses_learning = Learning.create(
   name: 'La séparation des usages',
   content: "<h1 style='text-align: center'>La séparation des usages</h1>
@@ -279,6 +296,9 @@ separation_of_uses_learning = Learning.create(
   <div>Si vous appliquez ces bonnes pratiques, vous limitez le risque que des personnes malveillantes volent des informations sensibles de votre entreprise après avoir réussi à prendre le contrôle de votre machine personnelle 💪.</div>",
   duration: 4
 )
+separation_of_uses_learning.photo.attach(io: File.open("app/assets/images/BYOD.png"), filename: "BYOD.png")
+
+
 travel_security_learning = Learning.create(
   name: 'Les déplacements professionnels',
   content: "<h1 style='text-align: center'>Les déplacements professionnels</h1>
@@ -351,6 +371,8 @@ travel_security_learning = Learning.create(
   </div>",
   duration: 7
 )
+travel_security_learning.photo.attach(io: File.open("app/assets/images/buisnessTrips.png"), filename: "buisnessTrips.png")
+
 check_list_learning = Learning.create(
   name: 'Ma check-list sécurité',
   content: "<h1 style='text-align: center'>Ma check-list sécurité</h1>
@@ -903,10 +925,12 @@ offer_excelcium.photo.attach(io: File.open("app/assets/images/excelcium.png"), f
 end
 
 # DB for offer_learning
+
 offer_learning1 = OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_light.id
 )
+
 offer_learning2 = OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_light.id
@@ -916,14 +940,17 @@ offer_learning3 = OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_essential.id
 )
+
 offer_learning4 = OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_essential.id
 )
+
 offer_learning5 = OfferLearning.create(
   learning_id: separation_of_uses_learning.id,
   offer_id: offer_essential.id
 )
+
 offer_learning6 = OfferLearning.create(
   learning_id: travel_security_learning.id,
   offer_id: offer_essential.id
@@ -933,18 +960,22 @@ offer_learning7 = OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_excelcium.id
 )
+
 offer_learning8 = OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_excelcium.id
 )
+
 offer_learning9 = OfferLearning.create(
   learning_id: separation_of_uses_learning.id,
   offer_id: offer_excelcium.id
 )
+
 offer_learning10 = OfferLearning.create(
   learning_id: travel_security_learning.id,
   offer_id: offer_excelcium.id
 )
+
 offer_learning11 = OfferLearning.create(
   learning_id: check_list_learning.id,
   offer_id: offer_excelcium.id
