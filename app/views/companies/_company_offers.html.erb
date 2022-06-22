@@ -6,11 +6,11 @@
           <h2 class="mb-0">
             <% if @company.offers.include?(offer) %>
               <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<%= in_words(i+1)%>" aria-expanded="true" aria-controls="collapse<%= in_words(i+1)%>">
-                offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-check-circle fa-1x text-success"></i>
+                <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-check-circle fa-1x text-success"></i>&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-compact-down"></i>
               </button>
             <% else %>
               <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<%= in_words(i+1)%>" aria-expanded="true" aria-controls="collapse<%= in_words(i+1)%>">
-                offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-x-circle fa-1x text-danger"></i>
+                <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-x-circle fa-1x text-danger"></i>&nbsp;&nbsp;&nbsp;<i class="bi bi-chevron-compact-down"></i>
               </button>
             <% end %>
             <hr class="">
