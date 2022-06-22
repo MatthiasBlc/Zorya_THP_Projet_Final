@@ -210,7 +210,7 @@
   }
 
   #btn-user-infos {
-      width: 15em;
+      width: auto;
       margin-right: 2em;
       
   }
@@ -219,6 +219,10 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+  }
+
+  .no-compagny-p {
+      width: 40em;
   }
 
  /* SHOW USER END */
@@ -356,5 +360,13 @@
 
 .blue-hr {
     color: #939eff;
+}
+
+#card-collapse {
+    width: 90% !important;
+}
+
+#accordionExample {
+    width: 100% !important;
 }
 /* COMPAGNY SHOW END */

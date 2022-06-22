@@ -48,7 +48,10 @@
         <p><%= @user.email %></p>
       </span>
       <% if @user.company.nil? %>
-        <p><i>Vous êtes actuellement rattaché à aucune entreprise. Vous êtes un collaborateur? Veuillez contacter votre responsable pour le rattachement. Vous êtes le responsable? Veuillez prendre contact avec votre Gestionnaire ou nous contacter pour souscrire à une offre.</i></p>
+        <div class="no-compagny-p">
+          <p><i>Vous êtes actuellement rattaché à aucune entreprise. Vous êtes un collaborateur? Veuillez contacter votre responsable pour le rattachement. Vous êtes le responsable? Veuillez prendre contact avec votre Gestionnaire ou nous contacter pour souscrire à une offre.</i></p>
+          <p id="btn-user-infos" class="btn btn-primary"><%= link_to "Nous contacter", new_contact_path()%></p>
+        </div>
       <%else%>
         <span class="user-span">
           <h4>Entreprise :</h4>
@@ -64,9 +67,6 @@
     <p id="btn-user-infos" class="btn btn-secondary-outline"><%= link_to "Modifier mes informations de connexion",  edit_user_registration_path %></p>
         <p id="btn-user-infos" class="btn btn-secondary-outline"><%= link_to "Modifier mon nom",  edit_user_path(current_user.id) %></p>
     <p id="btn-user-infos" class="btn btn-primary"><%= link_to "Voir mes parcours",  user_assignments_path(@user.id) %></p>
-    <% if @user.company.nil? %>
-      <p id="btn-user-infos" class="btn btn-primary"><%= link_to "Nous contacter", new_contact_path()%></p>
-    <% end %>
   </div>
 </div>
 <!-- INFOS END -->

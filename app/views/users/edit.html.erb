@@ -1,11 +1,19 @@
-<h2>Modifier mon profil</h2>
-<%= form_for @user do |f| %>
-  <div class='form-group'>
-    <label> Nom de famille</label>
-    <%= f.text_area :last_name, autofocus: true, autocomplete: "last_name", class: 'fill-field' %>
-    <label> Prénom </label>
-    <%= f.text_area :first_name, autofocus: true, autocomplete: "first_name", class: 'fill-field' %>
+<section class="section-form-devise">
+  <h2>Modifier mon profil</h2>
+  <div class="form-devise">
+    <%= form_for @user do |f| %>
+      <div class='d-flex flex-column'>
+        <label> Nom de famille</label>
+        <%= f.text_area :last_name, autofocus: true, autocomplete: "last_name", class: 'fill-field' %>
+      </div>
+      <div class='d-flex flex-column'>
+        <label> Prénom </label>
+        <%= f.text_area :first_name, autofocus: true, autocomplete: "first_name", class: 'fill-field' %>
+      </div>
+      <div class='d-flex flex-column align-self-center'>
+        <%= button_tag( :class => "btn btn-primary", :type => "submit" ) do %>Mettre à jour
+                                <% end %>  
+      </div>
+    <% end %>
   </div>
-  <div class='form-group'>
-    <%= submit_tag "Mettre à jour mon nom" %>  </div>
-<% end %>
+</section>
