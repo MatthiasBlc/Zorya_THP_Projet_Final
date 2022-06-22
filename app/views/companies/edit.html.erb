@@ -1,10 +1,16 @@
-<%= form_for [@company] do |f|%>
-  <div class='form-group'>
-    <label> Channel Slack </label>
-    <%= f.text_area :channel, size: "x1", class: 'form-control' %>
-     <label> Adresse URL du webhook</label>
-    <%= f.text_area :webhook, class: 'form-control' %>
-</div>
-  <div class='form-group'>
-   <%= submit_tag "Envoyer mes informations Slack" %>  </div>
-<% end %>
+<section class="section-form-devise">
+  <div class="form-devise">
+    <%= form_for [@company] do |f|%>
+      <div class='form-group'>
+        <label> Channel Slack </label>
+        <%= f.text_area :channel, size: "x1", class: 'form-control' %>
+        <label class="mt-2"> Adresse URL du webhook</label>
+        <%= f.text_area :webhook, class: 'form-control' %>
+    </div>
+      <div class='form-group'>
+      <%= button_tag( :class => "btn btn-primary", :type => "submit" ) do %> Envoyer mes informations Slack
+                                <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
