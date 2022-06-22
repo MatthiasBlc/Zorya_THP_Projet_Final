@@ -1,14 +1,20 @@
 <% if current_user.learnings.include?(@learning) %>
-<%= @learning.content.html_safe %>
-  <% else %>
-    <h3><%= "Vous n'avez pas accès à cette page"%><h3>
-  <% end %>
-  
-  <%puts @assignment.id%>
-
-<%puts current_user.id%>
-
+  <%= @learning.content.html_safe %>
+<% else %>
+  <h3><%= "Vous n'avez pas accès à cette page"%></h3>
   <div class="validate-course-btn">
-    <%= button_to "Valider la formation",  user_assignment_path(current_user.id, @assignment.id), params:{user_id: current_user.id, learning_id: @learning.id} ,method: "put", class: "btn btn-primary" %>
+    <%= button_to "retour à mes formations",  user_assignments_path(current_user.id), method: "get", class: "btn btn-primary" %>
   </div>
-
+<% end %>
+<% if @assignment.nil? %>
+<% else %>
+  <% if @assignment.assignment_done.nil? %>
+    <div class="validate-course-btn">
+      <%= button_to "Valider la formation",  user_assignment_path(current_user.id, @assignment.id), params:{user_id: current_user.id, learning_id: @learning.id} ,method: "put", class: "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="validate-course-btn">
+      <%= button_to "retour à mes formations",  user_assignments_path(current_user.id), method: "get", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+<% end %>
