@@ -1,9 +1,9 @@
-        
 <div id= "user_<%= @user.id %>" class="">
-  <h5>Utilisateur: <%= @user.email %></h5>
+  <span class="d-flex flex-row">
+    <p class="email-p-users"><%= @user.email %></p>
+  </span>
   <div>
-    <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: @user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: @user.id, company_id: @company.id}, method: :delete, class: "form-btn" %>
+    <%= button_to "retirer de ma société", user_company_path(@user_companies.find_by(user_id: @user.id, company_id: @company.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: @user.id, company_id: @company.id}, method: :delete, class: "btn btn-primary" %>
   </div>
-  <hr class="">
+  <hr class="blue-hr">
 </div>
-

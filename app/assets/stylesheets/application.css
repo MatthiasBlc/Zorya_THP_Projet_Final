@@ -165,19 +165,22 @@
 
   .section-user-infos {
     width: 100%;
-    height: 35em;
+    height: auto;
     border: 3px solid #5567ff;
     border-radius: 15px;
     background-color: #22242e;
     margin-top: 2em;
     padding-left: 5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }  
 
   .user-avatar {
-      width: 11em;
+      width: 13em;
+      height: 13em;
       border-radius: 100%;
       background-color:#5567ff;
   }
@@ -349,5 +352,9 @@
     font-size: 15px;
     padding-top: 2px;
     margin-left: 4px;
+}
+
+.blue-hr {
+    color: #939eff;
 }
 /* COMPAGNY SHOW END */
