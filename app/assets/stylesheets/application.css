@@ -287,6 +287,11 @@
 
 /* COMPAGNY SHOW */
 
+.btn-slack {
+    max-width: 30em !important;
+    margin: auto !important;
+}
+
  .grid-compagny > div {
     border: 0;
     display: flex;
