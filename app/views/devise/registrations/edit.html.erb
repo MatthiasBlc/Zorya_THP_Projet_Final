@@ -1,9 +1,9 @@
 <section class="section-form-devise">
 <h2>Modifier mon profil <% resource_name.to_s.humanize %></h2>
+<%= render "devise/shared/error_messages", resource: resource %>
 
 <div class="form-devise-edit">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
