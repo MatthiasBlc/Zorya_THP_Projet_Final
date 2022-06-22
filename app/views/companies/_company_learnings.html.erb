@@ -1,21 +1,35 @@
 <div class="d-flex flex-row flex-wrap justify-content-around">
-  <% @learnings.each do |learning| %>
-    <div class="compagny-learning-card">
-      <h5>Learning: <%= learning.name %></h5>
-      <div class="compagny-learning-each">
-        <% @users.each do |user| %>
-          <p class="text-center"><%= user.email %>
-            <div id= "inscription_button_<%= learning.id %>_<%= user.id %>" class="d-flex justify-content-center">
-              <%if user.learnings.include?(learning)%>
-                <%= button_to "désinscrire", user_assignment_path(user.id, 
+  <div class="accordion" id="accordionExample">
+    <% @learnings.each_with_index do |learning, i| %>
+      <div class="card">
+        <div class="card-header" id="heading<%= in_words(i+1)%>">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<%= in_words(i+1)%>" aria-expanded="true" aria-controls="collapse<%= in_words(i+1)%>">
+              Learning: <%= learning.name %>
+            </button>
+            <hr class="">
+          </h2>
+        </div>
+        <div id="collapse<%= in_words(i+1)%>" class="collapse" aria-labelledby="heading<%= in_words(i+1)%>" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="compagny-learning-each">
+              <% @users.each do |user| %>
+                <p class="text-center"><%= user.email %>
+                  <div id= "inscription_button_<%= learning.id %>_<%= user.id %>" class="d-flex justify-content-center">
+                    <%if user.learnings.include?(learning)%>
+                      <%= button_to "désinscrire", user_assignment_path(user.id, 
               @assignments.find_by(user_id: user.id, learning_id: learning.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, learning_id: learning.id}, method: :delete, class: "btn btn-secondary" %>
-              <% else %>
-                <%= button_to 'inscrire', user_assignments_path(user.id), remote: true, params: {user_id: user.id, learning_id: learning.id} ,method: :post, class: "btn btn-primary" %>
+                    <% else %>
+                      <%= button_to 'inscrire', user_assignments_path(user.id), remote: true, params: {user_id: user.id, learning_id: learning.id} ,method: :post, class: "btn btn-primary" %>
+                    <% end %>
+                  </div>
+                </p>
               <% end %>
             </div>
-          </p>
-        <% end %>
+          </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+</div>
 </div>
