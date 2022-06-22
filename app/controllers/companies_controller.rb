@@ -21,9 +21,6 @@ class CompaniesController < ApplicationController
 
   def update
     @company = Company.find(params[:id])
-    puts "*"*120
-    puts params[:company][:channel].inspect
-    puts "*"*120
 
     if @company.update(channel: params[:company][:channel], webhook: params[:company][:webhook])
        @company.save
