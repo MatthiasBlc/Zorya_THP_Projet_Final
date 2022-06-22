@@ -357,4 +357,12 @@
 .blue-hr {
     color: #939eff;
 }
+
+#card-collapse {
+    width: 90% !important;
+}
+
+#accordionExample {
+    width: 100% !important;
+}
 /* COMPAGNY SHOW END */
