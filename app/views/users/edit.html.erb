@@ -1,0 +1,11 @@
+<h2>Modifier mon profil</h2>
+<%= form_for @user do |f| %>
+  <div class='form-group'>
+    <label> Nom de famille</label>
+    <%= f.text_area :last_name, autofocus: true, autocomplete: "last_name", class: 'fill-field' %>
+    <label> Prénom </label>
+    <%= f.text_area :first_name, autofocus: true, autocomplete: "first_name", class: 'fill-field' %>
+  </div>
+  <div class='form-group'>
+    <%= submit_tag "Mettre à jour mon nom" %>  </div>
+<% end %>
