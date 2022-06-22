@@ -1,10 +1,40 @@
 <div class="d-flex flex-column">
-  <% @offers.each do |offer| %>
-    <% if @company.offers.include?(offer) %>
-      <h5>offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-check-circle fa-1x text-success"></i></h5>
-    <% else %>
-      <h5>offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-x-circle fa-1x text-danger"></i></h5>
+  <div class="accordion" id="accordionExample">
+    <% @offers.each_with_index do |offer, i| %>
+      <div class="card">
+        <div class="card-header" id="heading<%= in_words(i+1)%>">
+          <h2 class="mb-0">
+            <% if @company.offers.include?(offer) %>
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<%= in_words(i+1)%>" aria-expanded="true" aria-controls="collapse<%= in_words(i+1)%>">
+                offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-check-circle fa-1x text-success"></i>
+              </button>
+            <% else %>
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<%= in_words(i+1)%>" aria-expanded="true" aria-controls="collapse<%= in_words(i+1)%>">
+                offre: <%= offer.name %>&nbsp;&nbsp;&nbsp;<i class="bi bi-x-circle fa-1x text-danger"></i>
+              </button>
+            <% end %>
+            <hr class="">
+          </h2>
+        </div>
+        <div id="collapse<%= in_words(i+1)%>" class="collapse" aria-labelledby="heading<%= in_words(i+1)%>" data-parent="#accordionExample">
+          <div class="card-body">
+            <p class="card-text"><%= offer.description %></p>
+            <p class="card-text">Le pack comprend les formations suivantes :</p>
+            <p><% offer.learnings.each do |learning| %></p>
+              <p>○ <%= learning.name %></p>
+            <% end %>
+          </div>
+          <% if @company.offers.include?(offer) %>
+            <div class="d-flex flex-row justify-content-around mb-4">
+              <p class="btn btn-primary"><%= link_to "gérer mes formations", learnings_company_path, method: :get,  remote: true%></p>
+            </div>
+          <% else %>
+            <div class="d-flex flex-row justify-content-around mb-4">
+              <p class="btn btn-primary"><%= link_to "Nous contacter", new_contact_path()%></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
     <% end %>
-    <hr class="">
-  <% end %>
+  </div>
 </div>
