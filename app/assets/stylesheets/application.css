@@ -374,4 +374,10 @@
 #accordionExample {
     width: 100% !important;
 }
+
+.learning-user-mail {
+    margin-right: 1em;
+    padding-top: 10px;
+    font-size: 14px;
+}
 /* COMPAGNY SHOW END */

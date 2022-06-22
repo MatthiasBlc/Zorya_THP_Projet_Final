@@ -1,4 +1,4 @@
-<div class="d-flex flex-row flex-wrap justify-content-around">
+<div class="d-flex flex-column flex-wrap" id="card-collapse">
   <div class="accordion" id="accordionExample">
     <% @learnings.each_with_index do |learning, i| %>
       <div class="card">
@@ -12,13 +12,13 @@
         </div>
         <div id="collapse<%= in_words(i+1)%>" class="collapse" aria-labelledby="heading<%= in_words(i+1)%>" data-parent="#accordionExample">
           <div class="card-body">
-            <div class="compagny-learning-each">
+            <div class="compagny-learning-each d-flex flex-row justify-content-center">
               <% @users.each do |user| %>
-                <p class="text-center"><%= user.email %>
+                <p class="learning-user-mail text-center"><%= user.email %>
                   <div id= "inscription_button_<%= learning.id %>_<%= user.id %>" class="d-flex justify-content-center">
                     <%if user.learnings.include?(learning)%>
                       <%= button_to "désinscrire", user_assignment_path(user.id, 
-              @assignments.find_by(user_id: user.id, learning_id: learning.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, learning_id: learning.id}, method: :delete, class: "btn btn-secondary" %>
+                        @assignments.find_by(user_id: user.id, learning_id: learning.id)), remote: true, data: { confirm: "Êtes-vous sûr(e) ?" }, params: {user_id: user.id, learning_id: learning.id}, method: :delete, class: "btn btn-secondary" %>
                     <% else %>
                       <%= button_to 'inscrire', user_assignments_path(user.id), remote: true, params: {user_id: user.id, learning_id: learning.id} ,method: :post, class: "btn btn-primary" %>
                     <% end %>
