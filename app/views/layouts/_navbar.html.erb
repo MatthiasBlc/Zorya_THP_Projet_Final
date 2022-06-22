@@ -2,7 +2,9 @@
                      id="default-navbar"
                      data-primary>
   <% if !user_signed_in? %>
-      <span class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
+      <%= link_to root_path do %>
+      <span class=""><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
+      <% end %>
   <% else %>
   <% end %>
   <!-- Navbar Brand -->
