@@ -61,7 +61,8 @@
   </div>
   <hr>
   <div class="section-btn-infos">
-    <p id="btn-user-infos" class="btn btn-secondary-outline"><%= link_to "Modifier mes informations",  edit_user_registration_path %></p>
+    <p id="btn-user-infos" class="btn btn-secondary-outline"><%= link_to "Modifier mes informations de connexion",  edit_user_registration_path %></p>
+        <p id="btn-user-infos" class="btn btn-secondary-outline"><%= link_to "Modifier mon nom",  edit_user_path(current_user.id) %></p>
     <p id="btn-user-infos" class="btn btn-primary"><%= link_to "Voir mes parcours",  user_assignments_path(@user.id) %></p>
     <% if @user.company.nil? %>
       <p id="btn-user-infos" class="btn btn-primary"><%= link_to "Nous contacter", new_contact_path()%></p>
