@@ -1,3 +1,5 @@
   <%= id = "company_render" %>
 document.getElementById("<%= id %>").innerHTML = ""
 document.getElementById("<%= id %>").insertAdjacentHTML("beforeend", "<%= j render 'company_offers', user: @user, company: @company %>")
+
+document.getElementById('company_render').style.backgroundColor = "#2936a6";
