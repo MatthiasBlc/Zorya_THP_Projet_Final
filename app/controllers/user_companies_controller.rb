@@ -14,7 +14,7 @@ class UserCompaniesController < ApplicationController
     end
 
     if @list_user_company_of_user_id.include?(@user.id)
-      flash[:danger] = "cet utilisateur est déjà rataché à une entreprise ou n'existe pas."
+      flash[:danger] = "Cet utilisateur est déjà rataché à une entreprise ou n'existe pas."
     else
       @user_company = UserCompany.create(user_id: @user.id, company_id: @company.id)
 

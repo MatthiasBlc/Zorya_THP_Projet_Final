@@ -24,6 +24,7 @@ class CompaniesController < ApplicationController
 
     if @company.update(channel: params[:company][:channel], webhook: params[:company][:webhook])
        @company.save
+       flash[:success] = "Vos informations ont bien été enregistrées"
        redirect_to company_path(params[:id])
     else
       flash[:danger] = "Des informations sont manquantes"
