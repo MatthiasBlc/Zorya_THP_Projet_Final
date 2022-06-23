@@ -2,14 +2,14 @@
                      id="default-navbar"
                      data-primary>
   <% if !user_signed_in? %>
-      <%= link_to root_path, class:"rounded bg-primary" do %>
-        <span class=""><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
-      <% end %>
+    <%= link_to root_path, class:"rounded bg-primary" do %>
+      <span class=""><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
+    <% end %>
   <% else %>
-      <%= link_to root_path,  class:"navbar-brand mr-16pt d-lg-none"  do %>
-        <span class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
-        <span class="d-none d-lg-block">Luma</span>
-      <% end %>
+    <%= link_to root_path,  class:"navbar-brand mr-16pt d-lg-none"  do %>
+      <span class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
+      <span class="d-none d-lg-block">Luma</span>
+    <% end %>
   <% end %>
   <!-- Navbar Brand -->
   <!-- // END Navbar Brand -->
@@ -21,6 +21,14 @@
     <% if current_user.status_customer? %>
       <%= button_tag( :class => "navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0", :type => "button", :data_toggle => "sidebar") do %>
         <%= link_to "Mon espace entreprise", company_path(current_user.company.id), class: "sidebar-link" %>
+      <% end %>
+    <% end %>
+    <% if current_user.status_administrator? %>
+      <%= button_tag( :class => "navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0", :type => "button", :data_toggle => "sidebar") do %>
+        <%= link_to "Mon espace entreprise", company_path(current_user.company.id), class: "sidebar-link" %>
+      <% end %>
+      <%= button_tag( :class => "navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0", :type => "button", :data_toggle => "sidebar") do %>
+        <%= link_to "Administrer Zorya", rails_admin_path(), class: "sidebar-link" %>
       <% end %>
     <% end %>
   <% else %>

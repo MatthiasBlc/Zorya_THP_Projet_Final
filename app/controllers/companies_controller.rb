@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  before_action :customer
+  before_action :customer_or_administrator
   def show
     @company = Company.find(params[:id])
     if current_user.company != @company
@@ -73,8 +73,8 @@ class CompaniesController < ApplicationController
 
   private
 
-  def customer
-    unless current_user.status_customer?
+  def customer_or_administrator
+    unless current_user.status_customer? || current_user.status_administrator?
       flash[:danger] = "Vous n'avez pas accès à cette page"
       redirect_to root_path
     end
