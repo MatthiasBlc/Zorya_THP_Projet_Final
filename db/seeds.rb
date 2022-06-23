@@ -36,6 +36,30 @@ obj.get(response_target: "app/assets/images/BYOD.png")
 # Get img buisness trips (travel_security_learning)
 obj = s3.bucket('zoryaprojetfinal').object("buisnessTrips.png")
 obj.get(response_target: "app/assets/images/buisnessTrips.png")
+# Get img check_list
+obj = s3.bucket('zoryaprojetfinal').object("checklist.png")
+obj.get(response_target: "app/assets/images/checklist.png")
+# Get img GPDR
+obj = s3.bucket('zoryaprojetfinal').object("GPDR.png")
+obj.get(response_target: "app/assets/images/GPDR.png")
+# Get img social_engineering_learning
+obj = s3.bucket('zoryaprojetfinal').object("socialengineering.png")
+obj.get(response_target: "app/assets/images/socialengineering.png")
+# Get img physical_security_learning
+obj = s3.bucket('zoryaprojetfinal').object("physicalprotection.png")
+obj.get(response_target: "app/assets/images/physicalprotection.png")
+# Get img fingerprint_learning
+obj = s3.bucket('zoryaprojetfinal').object("fingerprint.png")
+obj.get(response_target: "app/assets/images/fingerprint.png")
+# Get img usb_device_learning
+obj = s3.bucket('zoryaprojetfinal').object("usb.png")
+obj.get(response_target: "app/assets/images/usb.png")
+# Get img ransomwares_learning
+obj = s3.bucket('zoryaprojetfinal').object("ransomware.png")
+obj.get(response_target: "app/assets/images/ransomware.png")
+# Get img incident_crisis_learning
+obj = s3.bucket('zoryaprojetfinal').object("incidentcrisis.png")
+obj.get(response_target: "app/assets/images/incidentcrisis.png")
 
 # DB for learnings
 password_learning = Learning.create(
@@ -506,6 +530,8 @@ check_list_learning = Learning.create(
   </div>",
   duration: 12
 )
+check_list_learning.photo.attach(io: File.open("app/assets/images/checklist.png"), filename: "checklist.png")
+
 gpdr_learning = Learning.create(
   name: 'Le RGPD',
   content: "<h1 style='text-align: center'>Le RGPD</h1>
@@ -572,6 +598,8 @@ gpdr_learning = Learning.create(
   </ul>",
   duration: 5
 )
+gpdr_learning.photo.attach(io: File.open("app/assets/images/GPDR.png"), filename: "GPDR.png")
+
 social_engineering_learning = Learning.create(
   name: "L'ingéniérie sociale",
   content: "<h1 style='text-align: center'>L'ingénierie sociale</h1>
@@ -619,6 +647,8 @@ social_engineering_learning = Learning.create(
   </div>",
   duration: 11
 )
+social_engineering_learning.photo.attach(io: File.open("app/assets/images/socialengineering.png"), filename: "socialengineering.png")
+
 physical_security_learning = Learning.create(
   name: 'La sécurité physique',
   content: "<h1 style='text-align: center'>La sécurité physique</h1>
@@ -669,6 +699,8 @@ physical_security_learning = Learning.create(
   </div>",
   duration: 6
 )
+physical_security_learning.photo.attach(io: File.open("app/assets/images/physicalprotection.png"), filename: "physicalprotection.png")
+
 fingerprint_learning = Learning.create(
   name: 'Mon empreinte numérique',
   content: "<h1 style='text-align: center'>Mon empreinte numérique</h1>
@@ -720,6 +752,8 @@ fingerprint_learning = Learning.create(
   </div>",
   duration: 6
 )
+fingerprint_learning.photo.attach(io: File.open("app/assets/images/fingerprint.png"), filename: "fingerprint.png")
+
 usb_device_learning = Learning.create(
   name: 'Les appareils USB',
   content: "<h1 style='text-align: center'>Les appareils USB</h1>
@@ -756,6 +790,8 @@ usb_device_learning = Learning.create(
   </iframe>",
   duration: 8
 )
+usb_device_learning.photo.attach(io: File.open("app/assets/images/usb.png"), filename: "usb.png")
+
 ransomwares_learning = Learning.create(
   name: 'Les rançongiciels ou ransomwares',
   content: "<h1 style='text-align: center'>Les rançongiciels (ransomwares)</h1>
@@ -816,6 +852,8 @@ ransomwares_learning = Learning.create(
   </li>",
   duration: 9
 )
+ransomwares_learning.photo.attach(io: File.open("app/assets/images/ransomware.png"), filename: "ransomware.png")
+
 incident_crisis_learning = Learning.create(
   name: 'Gérer un incident de sécurité',
   content: "<h1 style='text-align: center'>Gérer un incident de sécurité</h1>
@@ -888,6 +926,7 @@ incident_crisis_learning = Learning.create(
   </li>",
   duration: 9
 )
+incident_crisis_learning.photo.attach(io: File.open("app/assets/images/incidentcrisis.png"), filename: "incidentcrisis.png")
 
 # DB for Offer
 offer_light = Offer.create(
