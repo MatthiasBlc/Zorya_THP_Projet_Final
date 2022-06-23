@@ -1055,8 +1055,29 @@ cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcu
 comp1 = Company.create(
   name: 'test engine'
 )
-
 UserCompany.create(user: cust1, company: comp1)
 Purchase.create(company: comp1, offer: offer_essential)
 
 
+admin1 = User.create(
+  first_name: 'Admin',
+  last_name: 'Admin',
+  email: 'adminzorya@yopmail.com',
+  password: '71mdp++c0nPLX#',
+  password_confirmation: '71mdp++c0nPLX#',
+  status: 2
+)
+
+zorya = Company.create(
+  name: "Zorya_Admin"
+)
+
+admin_user_company = UserCompany.create(
+  user: admin1,
+  company: zorya
+)
+
+purchase_zorya = Purchase.create(
+  company: zorya,
+  offer: offer_excelcium
+)

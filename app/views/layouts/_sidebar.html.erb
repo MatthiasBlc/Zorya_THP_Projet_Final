@@ -17,7 +17,11 @@
             <% if current_user.status_customer? %>
               <%= link_to "Mon espace entreprise", company_path(current_user.company.id), class: "sidebar-link" %>
             <% end %>
-          <% else %>
+            <% if current_user.status_administrator? %>
+              <%= link_to "Mon espace entreprise", company_path(current_user.company.id), class: "sidebar-link" %>
+              <%= link_to "Administrer Zorya", rails_admin_path(), class: "sidebar-link" %>
+            <% else %>
+            <% end %>
           <% end %>
         </span>
       </div>
