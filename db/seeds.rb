@@ -55,8 +55,8 @@ obj.get(response_target: "app/assets/images/fingerprint.png")
 obj = s3.bucket('zoryaprojetfinal').object("usb.png")
 obj.get(response_target: "app/assets/images/usb.png")
 # Get img ransomwares_learning
-obj = s3.bucket('zoryaprojetfinal').object("ransomwares.png")
-obj.get(response_target: "app/assets/images/ransomwares.png")
+obj = s3.bucket('zoryaprojetfinal').object("ransomware.png")
+obj.get(response_target: "app/assets/images/ransomware.png")
 # Get img incident_crisis_learning
 obj = s3.bucket('zoryaprojetfinal').object("incidentcrisis.png")
 obj.get(response_target: "app/assets/images/incidentcrisis.png")
