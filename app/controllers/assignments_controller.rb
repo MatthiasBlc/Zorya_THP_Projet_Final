@@ -16,9 +16,6 @@ class AssignmentsController < ApplicationController
 
     @assignments.each do |assignment|
       @list_assignment_of_user_id << assignment.user_id
-    end
-
-    @assignments.each do |assignment|
       @list_assignment_of_learning_id << assignment.learning_id
     end
 

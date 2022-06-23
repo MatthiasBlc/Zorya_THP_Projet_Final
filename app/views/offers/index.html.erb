@@ -35,40 +35,40 @@
   <div class="text-presentation-root0">
     <h3 class="text-right">Zorya, pourquoi nous choisir ?</h3>
     <p class="text-right">Grâce à notre plateforme de formation en ligne, vous pouvez former 
-    efficacement vos employés, tout en ayant un suivi de l’avancée de leur parcours. 
-    Nos experts en cybersécurité ont préparé des formations complètes réparties dans plusieurs packages, 
-    afin que vous puissiez choisir ce qui convient le mieux à votre entreprise.</p>
-    <div>
-    </section>
-    <section class="presentation-root d-flex flex-row flex-wrap">
-      <div class="img-presentation-root"><%= image_tag('presentation-2.png', class: 'img-presentation-root', alt: 'package-photo') %></div>
-      <div class="text-presentation-root">
-        <h3>Connexion avec Slack</h3>
-        <p>Les employés inscrits sur notre plateforme peuvent entrer leurs informations 
-        Slack afin de rester informés en temps réel, par exemple lorsqu’une nouvelle formation est disponible. 
-        Ils peuvent aussi rejoindre la chaîne « Zorya » afin d’échanger avec notre communauté.
-        Les employeurs également peuvent bénéficier de ce service.</p>
-        <div>
-        </section>
-        <!-- PRESENTATION END -->
-        <h2 class="text-center">NOS OFFRES</h2>
-        <!-- PRODUCT CARDS -->
-        <div class=" d-flex flex-row justify-content-between flex-wrap">
-          <% @offers.each do |offer| %>
-            <div class="card" style="width: 18rem;">
-              <%= image_tag(offer.photo, class: 'card-img-top', alt: 'package-photo') %>
-              <div class="card-body">
-                <h5 class="card-title"><%= offer.name %></h5>
-                <br>
-                <p class="card-text"><%= offer.description %></p>
-                <p><% offer.learnings.each do |learning| %></p>
-                  <p>○ <%= learning.name %></p>
-                <% end %>
-              </div>
-              <div class="d-flex flex-row justify-content-around mb-4">
-                <p class="btn btn-primary"><%= link_to "+ d'infos", new_contact_path()%></p>
-              </div>
-            </div>
-          <% end %>
-        </div>
-        <!-- PRODUCT CARDS END -->
+      efficacement vos employés, tout en ayant un suivi de l’avancée de leur parcours. 
+      Nos experts en cybersécurité ont préparé des formations complètes réparties dans plusieurs packages, 
+      afin que vous puissiez choisir ce qui convient le mieux à votre entreprise.</p>
+  </div>
+</section>
+<section class="presentation-root d-flex flex-row flex-wrap">
+  <div class="img-presentation-root"><%= image_tag('presentation-2.png', class: 'img-presentation-root', alt: 'package-photo') %></div>
+  <div class="text-presentation-root">
+    <h3>Connexion avec Slack</h3>
+    <p>Les employés inscrits sur notre plateforme peuvent entrer leurs informations 
+      Slack afin de rester informés en temps réel, par exemple lorsqu’une nouvelle formation est disponible. 
+      Ils peuvent aussi rejoindre la chaîne « Zorya » afin d’échanger avec notre communauté.
+      Les employeurs également peuvent bénéficier de ce service.</p>
+  </div>
+</section>
+<!-- PRESENTATION END -->
+<h2 class="text-center">NOS OFFRES</h2>
+<!-- PRODUCT CARDS -->
+<div class=" d-flex flex-row justify-content-between flex-wrap">
+  <% @offers.each do |offer| %>
+    <div class="card" style="width: 18rem;">
+      <%= image_tag(offer.photo, class: 'card-img-top', alt: 'package-photo') %>
+      <div class="card-body">
+        <h5 class="card-title"><%= offer.name %></h5>
+        <br>
+        <p class="card-text"><%= offer.description %></p>
+        <p><% offer.learnings.each do |learning| %></p>
+          <p>○ <%= learning.name %></p>
+        <% end %>
+      </div>
+      <div class="d-flex flex-row justify-content-around mb-4">
+        <p class="btn btn-primary"><%= link_to "+ d'infos", new_contact_path()%></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<!-- PRODUCT CARDS END -->
