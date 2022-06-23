@@ -1011,7 +1011,7 @@ offer_learning18 = OfferLearning.create(
 
 
 # create a customer for tests
-cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcustomer@yopmail.com', password: 'password', password_confirmation: 'password',
+cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcustomer@yopmail.com', password: '71mdpc0nPLX#', password_confirmation: '71mdpc0nPLX#',
                     status: 1)
 comp1 = Company.create(
   name: 'test engine'
