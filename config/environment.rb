@@ -16,6 +16,6 @@ ActionMailer::Base.smtp_settings =   {
 def slack_notifier(webhook, channel)
   Slack::Notifier.new webhook do
     defaults channel: channel,
-             username: "notifier"
+             username: "Zorya"
   end
 end
