@@ -3,11 +3,9 @@
     <p class="text-70 brand mb-24pt">
       <%= image_tag('black-70@2x.png', class: 'brand-icon', alt: 'Luma', width: '30') %>
       Zorya
-      <i id="social-icon" class="bi bi-facebook font-size-20pt"></i>
-      <i id="social-icon" class="bi bi-instagram font-size-20pt"></i>
-      <i id="social-icon" class="bi bi-twitter font-size-20pt"></i>
-      <i id="social-icon" class="bi bi-youtube font-size-20pt"></i>
-      <i id="social-icon" class="bi bi-linkedin font-size-20pt"></i>
+      <%= link_to '<i id="social-icon" class="bi bi-twitter font-size-20pt"></i>'.html_safe, 'https://twitter.com/ZoryaLearning', target: "_blank", rel: "nofollow" %>
+      <%= link_to '<i id="social-icon" class="bi bi-youtube font-size-20pt"></i>'.html_safe, 'https://www.youtube.com/channel/UCWq5Nevszuce7Egn4kDeqQg', target: "_blank", rel: "nofollow" %>
+      <%= link_to '<i id="social-icon" class="bi bi-linkedin font-size-20pt"></i>'.html_safe, 'https://www.linkedin.com/in/zorya-learning/', target: "_blank", rel: "nofollow" %>
     </p>
     <p class="measure-lead-max small text-70 mr-8pt">Formez vos collaborateurs à la cybersécurité avec Zorya, votre plateforme e-learning.</p>
     <p class="mt-10pt mb-8pt d-flex">
