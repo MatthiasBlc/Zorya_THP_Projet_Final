@@ -26,7 +26,7 @@
           </div>
           <% if @company.offers.include?(offer) %>
             <div class="d-flex flex-row justify-content-around mb-4">
-              <p class="btn btn-primary"><%= link_to "gérer mes formations", learnings_company_path, method: :get,  remote: true%></p>
+              <p class="btn btn-primary"><%= link_to "Gérer mes formations", learnings_company_path, method: :get,  remote: true%></p>
             </div>
           <% else %>
             <div class="d-flex flex-row justify-content-around mb-4">

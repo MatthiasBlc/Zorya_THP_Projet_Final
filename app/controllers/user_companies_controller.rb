@@ -19,7 +19,7 @@ class UserCompaniesController < ApplicationController
       @user_company = UserCompany.create(user_id: @user.id, company_id: @company.id)
 
       respond_to do |format|
-        format.html { redirect_to company_path, notice: 'inscription réussie' }
+        format.html { redirect_to company_path, notice: 'Inscription réussie' }
         format.js {}
       end
     end

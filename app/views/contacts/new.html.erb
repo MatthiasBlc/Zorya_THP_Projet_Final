@@ -13,14 +13,15 @@
       <div class="field">
         <%= f.label :email, "Email" %><br>
         <%= f.email_field :email, autocomplete: "email", class: "fill-field" %>
-        <div class="field">
-          <%= f.label :content, "Votre message" %><br>
-          <%= f.text_field :content, class: "fill-field-msg" %>
-        </div>
-        <div class="actions">
-          <%= button_tag( :class => "btn btn-primary", :type => "submit" ) do %> Envoyer
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-  </section>
+      </div>
+      <div class="field">
+        <%= f.label :content, "Votre message" %><br>
+        <%= f.text_field :content, class: "fill-field-msg" %>
+      </div>
+      <div class="actions">
+        <%= button_tag( :class => "btn btn-primary", :type => "submit" ) do %> Envoyer
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>

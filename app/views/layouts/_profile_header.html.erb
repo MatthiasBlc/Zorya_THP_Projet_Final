@@ -1,7 +1,8 @@
 <div class="jumbotron">
-<% if user_signed_in? && current_user.first_name != nil %>
-   <h1 class="text-center"><%= current_user.first_name %>,<br> Bienvenue sur Zorya, votre plateforme e-learning.</h1>
-<% else %>
+  <% if user_signed_in? && current_user.first_name != nil %>
+    <h1 class="text-center"><%= current_user.first_name %>,<br>
+      Bienvenue sur Zorya, votre plateforme e-learning.</h1>
+  <% else %>
     <h1>Bienvenue sur Zorya, votre plateforme e-learning</h1>
-<% end %>
+  <% end %>
 </div>
