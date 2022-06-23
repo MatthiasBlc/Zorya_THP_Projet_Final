@@ -5,13 +5,13 @@
 <div class="d-flex flex-column justify-content-center">
   <div class="grid-compagny">
     <div id="company_users" class="grid1">
-      <%= link_to 'GESTION DES USERS', users_company_path, method: :get, id: 'btn1', class: 'btn btn-compagny', remote: true %>
+      <%= link_to 'GESTION DES UTILISATEURS', users_company_path, method: :get, id: 'btn1', class: 'btn btn-compagny', remote: true %>
     </div>
     <div id="company_learnings" class="grid2">
-      <%= link_to 'GESTION DES LEARNINGS', learnings_company_path, method: :get, class: 'btn btn-compagny',  remote: true %>
+      <%= link_to 'ATTRIBUER DES FORMATIONS', learnings_company_path, method: :get, class: 'btn btn-compagny',  remote: true %>
     </div>
     <div id="company_offers" class="grid3">
-      <%= link_to 'INDEX DES OFFERS', offers_company_path, method: :get, class: 'btn btn-compagny',  remote: true %>
+      <%= link_to 'GERER VOS OFFRES', offers_company_path, method: :get, class: 'btn btn-compagny',  remote: true %>
     </div>
     <div id="company_render" class="grid-render"><%= render 'company_users', class: 'btn btn-compagny' %></div>
   </div>
