@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
               rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Perfect Scrollbar -->
     <%= stylesheet_link_tag    'perfect-scrollbar', media: 'all' %>
     <!-- Material Design Icons -->
@@ -43,6 +44,13 @@
           <%= render 'layouts/profile_header' %>
         <% else %>
         <% end %>
+        <!-- ALERT MSGS -->
+        <% flash.each do |name, msg| %>
+          <div class='alert alert-<%= name %> text-center'>
+            <%= msg %>
+          </div>
+        <% end %>
+        <!-- ALERT MSGS END -->
         <div class="container page__container flex d-flex my-32pt">
           <div class="" style="width: 100%">
             <span><%= yield %></span>

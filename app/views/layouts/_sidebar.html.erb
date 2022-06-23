@@ -4,17 +4,6 @@
     <div class="sidebar sidebar-black-dodger-blue sidebar-left"
                          data-perfect-scrollbar>
       <!-- Sidebar Content -->
-      <div class="d-flex align-items-center navbar-height">
-        <form action="index.html"
-                                  class="search-form search-form--black mx-16pt pr-0 pl-16pt">
-          <input type="text"
-                                       class="form-control pl-0"
-                                       placeholder="Search">
-          <%= button_tag( :class => "btn", :type => "submit" ) do %>
-            <i class="bi bi-search font-size-20pt"></i>
-          <% end %>
-        </form>
-      </div>
       <%= link_to root_path,  class:"sidebar-brand"  do %>
         <span class="avatar avatar-xl sidebar-brand-icon h-auto">
           <div class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', alt: 'logo') %></div>

@@ -57,13 +57,13 @@
  }
 
  .text-presentation-root0 {
-    width: 60%;
+    width: 25em;
     margin-right: 3em;
     align-self: center;
 }
 
  .text-presentation-root {
-     width: 60%;
+     width: 25em;
      margin-left: 3em;
      align-self: center;
  }
@@ -282,10 +282,15 @@
  .sidebar-link:hover {
     color: rgb(255, 255, 255) !important;
    }
-    
+
 /* SIDEBAR END */
 
 /* COMPAGNY SHOW */
+
+.btn-slack {
+    max-width: 30em !important;
+    margin: auto !important;
+}
 
  .grid-compagny > div {
     border: 0;
@@ -368,5 +373,11 @@
 
 #accordionExample {
     width: 100% !important;
+}
+
+.learning-user-mail {
+    margin-right: 1em;
+    padding-top: 10px;
+    font-size: 14px;
 }
 /* COMPAGNY SHOW END */
