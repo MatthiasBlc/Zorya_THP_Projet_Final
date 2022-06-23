@@ -18,4 +18,12 @@
       </div>
     </div>
   <% end %>
+  <% if current_user.assignments.length == 0 %>
+    <div class="section-user-infos mb-5">
+      <div class="user-infos-1 d-flex flex-row flex-wrap">
+        <p>Tu n'as pas de formation disponible pour le moment. Soit rassuré tu recevras une notification ou un email lorsqu'une nouvelle formation sera disponible.</p>
+      </div>
+    </div>
+  <% else %>
+  <% end %>
 </div>
