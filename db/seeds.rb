@@ -19,47 +19,47 @@ Company.destroy_all
 User.destroy_all
 
 5.times do |_i|
-  company = Company.create(
+  Company.create(
     name: Faker::Company.name
   )
 end
 
-# Get img password 
-obj = s3.bucket('zoryaprojetfinal').object("password.png")
-obj.get(response_target: "app/assets/images/password.png")
+# Get img password
+obj = s3.bucket('zoryaprojetfinal').object('password.png')
+obj.get(response_target: 'app/assets/images/password.png')
 # Get img fishing
-obj = s3.bucket('zoryaprojetfinal').object("fishing.png")
-obj.get(response_target: "app/assets/images/fishing.png")
+obj = s3.bucket('zoryaprojetfinal').object('fishing.png')
+obj.get(response_target: 'app/assets/images/fishing.png')
 # Get img BYOD (separation of uses )
-obj = s3.bucket('zoryaprojetfinal').object("BYOD.png")
-obj.get(response_target: "app/assets/images/BYOD.png")
+obj = s3.bucket('zoryaprojetfinal').object('BYOD.png')
+obj.get(response_target: 'app/assets/images/BYOD.png')
 # Get img buisness trips (travel_security_learning)
-obj = s3.bucket('zoryaprojetfinal').object("buisnessTrips.png")
-obj.get(response_target: "app/assets/images/buisnessTrips.png")
+obj = s3.bucket('zoryaprojetfinal').object('buisnessTrips.png')
+obj.get(response_target: 'app/assets/images/buisnessTrips.png')
 # Get img check_list
-obj = s3.bucket('zoryaprojetfinal').object("checklist.png")
-obj.get(response_target: "app/assets/images/checklist.png")
+obj = s3.bucket('zoryaprojetfinal').object('checklist.png')
+obj.get(response_target: 'app/assets/images/checklist.png')
 # Get img GPDR
-obj = s3.bucket('zoryaprojetfinal').object("GPDR.png")
-obj.get(response_target: "app/assets/images/GPDR.png")
+obj = s3.bucket('zoryaprojetfinal').object('GPDR.png')
+obj.get(response_target: 'app/assets/images/GPDR.png')
 # Get img social_engineering_learning
-obj = s3.bucket('zoryaprojetfinal').object("socialengineering.png")
-obj.get(response_target: "app/assets/images/socialengineering.png")
+obj = s3.bucket('zoryaprojetfinal').object('socialengineering.png')
+obj.get(response_target: 'app/assets/images/socialengineering.png')
 # Get img physical_security_learning
-obj = s3.bucket('zoryaprojetfinal').object("physicalprotection.png")
-obj.get(response_target: "app/assets/images/physicalprotection.png")
+obj = s3.bucket('zoryaprojetfinal').object('physicalprotection.png')
+obj.get(response_target: 'app/assets/images/physicalprotection.png')
 # Get img fingerprint_learning
-obj = s3.bucket('zoryaprojetfinal').object("fingerprint.png")
-obj.get(response_target: "app/assets/images/fingerprint.png")
+obj = s3.bucket('zoryaprojetfinal').object('fingerprint.png')
+obj.get(response_target: 'app/assets/images/fingerprint.png')
 # Get img usb_device_learning
-obj = s3.bucket('zoryaprojetfinal').object("usb.png")
-obj.get(response_target: "app/assets/images/usb.png")
+obj = s3.bucket('zoryaprojetfinal').object('usb.png')
+obj.get(response_target: 'app/assets/images/usb.png')
 # Get img ransomwares_learning
-obj = s3.bucket('zoryaprojetfinal').object("ransomware.png")
-obj.get(response_target: "app/assets/images/ransomware.png")
+obj = s3.bucket('zoryaprojetfinal').object('ransomware.png')
+obj.get(response_target: 'app/assets/images/ransomware.png')
 # Get img incident_crisis_learning
-obj = s3.bucket('zoryaprojetfinal').object("incidentcrisis.png")
-obj.get(response_target: "app/assets/images/incidentcrisis.png")
+obj = s3.bucket('zoryaprojetfinal').object('incidentcrisis.png')
+obj.get(response_target: 'app/assets/images/incidentcrisis.png')
 
 # DB for learnings
 password_learning = Learning.create(
@@ -144,7 +144,7 @@ password_learning = Learning.create(
   </div>",
   duration: 6
 )
-password_learning.photo.attach(io: File.open("app/assets/images/password.png"), filename: "password.png")
+password_learning.photo.attach(io: File.open('app/assets/images/password.png'), filename: 'password.png')
 
 phishing_learning = Learning.create(
   name: "L'hammeçonnage ou phishing",
@@ -283,7 +283,7 @@ phishing_learning = Learning.create(
   que les conséquences sont parfois irréversibles.<br>",
   duration: 8
 )
-phishing_learning.photo.attach(io: File.open("app/assets/images/fishing.png"), filename: "fishing.png")
+phishing_learning.photo.attach(io: File.open('app/assets/images/fishing.png'), filename: 'fishing.png')
 
 separation_of_uses_learning = Learning.create(
   name: 'La séparation des usages',
@@ -320,8 +320,7 @@ separation_of_uses_learning = Learning.create(
   <div>Si vous appliquez ces bonnes pratiques, vous limitez le risque que des personnes malveillantes volent des informations sensibles de votre entreprise après avoir réussi à prendre le contrôle de votre machine personnelle 💪.</div>",
   duration: 4
 )
-separation_of_uses_learning.photo.attach(io: File.open("app/assets/images/BYOD.png"), filename: "BYOD.png")
-
+separation_of_uses_learning.photo.attach(io: File.open('app/assets/images/BYOD.png'), filename: 'BYOD.png')
 
 travel_security_learning = Learning.create(
   name: 'Les déplacements professionnels',
@@ -395,7 +394,8 @@ travel_security_learning = Learning.create(
   </div>",
   duration: 7
 )
-travel_security_learning.photo.attach(io: File.open("app/assets/images/buisnessTrips.png"), filename: "buisnessTrips.png")
+travel_security_learning.photo.attach(io: File.open('app/assets/images/buisnessTrips.png'),
+                                      filename: 'buisnessTrips.png')
 
 check_list_learning = Learning.create(
   name: 'Ma check-list sécurité',
@@ -530,7 +530,7 @@ check_list_learning = Learning.create(
   </div>",
   duration: 12
 )
-check_list_learning.photo.attach(io: File.open("app/assets/images/checklist.png"), filename: "checklist.png")
+check_list_learning.photo.attach(io: File.open('app/assets/images/checklist.png'), filename: 'checklist.png')
 
 gpdr_learning = Learning.create(
   name: 'Le RGPD',
@@ -598,7 +598,7 @@ gpdr_learning = Learning.create(
   </ul>",
   duration: 5
 )
-gpdr_learning.photo.attach(io: File.open("app/assets/images/GPDR.png"), filename: "GPDR.png")
+gpdr_learning.photo.attach(io: File.open('app/assets/images/GPDR.png'), filename: 'GPDR.png')
 
 social_engineering_learning = Learning.create(
   name: "L'ingéniérie sociale",
@@ -647,7 +647,8 @@ social_engineering_learning = Learning.create(
   </div>",
   duration: 11
 )
-social_engineering_learning.photo.attach(io: File.open("app/assets/images/socialengineering.png"), filename: "socialengineering.png")
+social_engineering_learning.photo.attach(io: File.open('app/assets/images/socialengineering.png'),
+                                         filename: 'socialengineering.png')
 
 physical_security_learning = Learning.create(
   name: 'La sécurité physique',
@@ -699,7 +700,8 @@ physical_security_learning = Learning.create(
   </div>",
   duration: 6
 )
-physical_security_learning.photo.attach(io: File.open("app/assets/images/physicalprotection.png"), filename: "physicalprotection.png")
+physical_security_learning.photo.attach(io: File.open('app/assets/images/physicalprotection.png'),
+                                        filename: 'physicalprotection.png')
 
 fingerprint_learning = Learning.create(
   name: 'Mon empreinte numérique',
@@ -752,7 +754,7 @@ fingerprint_learning = Learning.create(
   </div>",
   duration: 6
 )
-fingerprint_learning.photo.attach(io: File.open("app/assets/images/fingerprint.png"), filename: "fingerprint.png")
+fingerprint_learning.photo.attach(io: File.open('app/assets/images/fingerprint.png'), filename: 'fingerprint.png')
 
 usb_device_learning = Learning.create(
   name: 'Les appareils USB',
@@ -790,7 +792,7 @@ usb_device_learning = Learning.create(
   </iframe>",
   duration: 8
 )
-usb_device_learning.photo.attach(io: File.open("app/assets/images/usb.png"), filename: "usb.png")
+usb_device_learning.photo.attach(io: File.open('app/assets/images/usb.png'), filename: 'usb.png')
 
 ransomwares_learning = Learning.create(
   name: 'Les rançongiciels ou ransomwares',
@@ -852,7 +854,7 @@ ransomwares_learning = Learning.create(
   </li>",
   duration: 9
 )
-ransomwares_learning.photo.attach(io: File.open("app/assets/images/ransomware.png"), filename: "ransomware.png")
+ransomwares_learning.photo.attach(io: File.open('app/assets/images/ransomware.png'), filename: 'ransomware.png')
 
 incident_crisis_learning = Learning.create(
   name: 'Gérer un incident de sécurité',
@@ -926,38 +928,39 @@ incident_crisis_learning = Learning.create(
   </li>",
   duration: 9
 )
-incident_crisis_learning.photo.attach(io: File.open("app/assets/images/incidentcrisis.png"), filename: "incidentcrisis.png")
+incident_crisis_learning.photo.attach(io: File.open('app/assets/images/incidentcrisis.png'),
+                                      filename: 'incidentcrisis.png')
 
 # DB for Offer
 offer_light = Offer.create(
   name: 'Offre Light',
   description: 'Le minimum pour sensibiliser de vos collaborateurs. Elle comprend une formation par semestre.'
-  )
+)
 
-obj = s3.bucket('zoryaprojetfinal').object("light.png")
-obj.get(response_target: "app/assets/images/light.png")
-offer_light.photo.attach(io: File.open("app/assets/images/light.png"), filename: "light.png")
+obj = s3.bucket('zoryaprojetfinal').object('light.png')
+obj.get(response_target: 'app/assets/images/light.png')
+offer_light.photo.attach(io: File.open('app/assets/images/light.png'), filename: 'light.png')
 
 offer_essential = Offer.create(
   name: 'Offre Essential',
   description: 'Notre solution médiane, pour une sensibilisation continue de vos collaborateurs. Elle comprend une formation par trimestre.'
-  )
+)
 
-obj = s3.bucket('zoryaprojetfinal').object("essential.png")
-obj.get(response_target: "app/assets/images/essential.png")
-offer_essential.photo.attach(io: File.open("app/assets/images/essential.png"), filename: "essential.png")
+obj = s3.bucket('zoryaprojetfinal').object('essential.png')
+obj.get(response_target: 'app/assets/images/essential.png')
+offer_essential.photo.attach(io: File.open('app/assets/images/essential.png'), filename: 'essential.png')
 
 offer_excelcium = Offer.create(
   name: 'Offre Excelcium',
   description: 'Elle vous garantie une formation optimale de vos collaborateurs. Elle comprend une formation par mois.'
-  )
+)
 
-obj = s3.bucket('zoryaprojetfinal').object("excelcium.png")
-obj.get(response_target: "app/assets/images/excelcium.png")
-offer_excelcium.photo.attach(io: File.open("app/assets/images/excelcium.png"), filename: "excelcium.png")
+obj = s3.bucket('zoryaprojetfinal').object('excelcium.png')
+obj.get(response_target: 'app/assets/images/excelcium.png')
+offer_excelcium.photo.attach(io: File.open('app/assets/images/excelcium.png'), filename: 'excelcium.png')
 
 2.times do |_i|
-  purchase = Purchase.create(
+  Purchase.create(
     offer_id: Offer.all.sample.id,
     company_id: Company.all.sample.id
   )
@@ -965,89 +968,88 @@ end
 
 # DB for offer_learning
 
-offer_learning1 = OfferLearning.create(
+OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_light.id
 )
 
-offer_learning2 = OfferLearning.create(
+OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_light.id
 )
 
-offer_learning3 = OfferLearning.create(
+OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_essential.id
 )
 
-offer_learning4 = OfferLearning.create(
+OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_essential.id
 )
 
-offer_learning5 = OfferLearning.create(
+OfferLearning.create(
   learning_id: separation_of_uses_learning.id,
   offer_id: offer_essential.id
 )
 
-offer_learning6 = OfferLearning.create(
+OfferLearning.create(
   learning_id: travel_security_learning.id,
   offer_id: offer_essential.id
 )
 
-offer_learning7 = OfferLearning.create(
+OfferLearning.create(
   learning_id: password_learning.id,
   offer_id: offer_excelcium.id
 )
 
-offer_learning8 = OfferLearning.create(
+OfferLearning.create(
   learning_id: phishing_learning.id,
   offer_id: offer_excelcium.id
 )
 
-offer_learning9 = OfferLearning.create(
+OfferLearning.create(
   learning_id: separation_of_uses_learning.id,
   offer_id: offer_excelcium.id
 )
 
-offer_learning10 = OfferLearning.create(
+OfferLearning.create(
   learning_id: travel_security_learning.id,
   offer_id: offer_excelcium.id
 )
 
-offer_learning11 = OfferLearning.create(
+OfferLearning.create(
   learning_id: check_list_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning12 = OfferLearning.create(
+OfferLearning.create(
   learning_id: gpdr_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning13 = OfferLearning.create(
+OfferLearning.create(
   learning_id: social_engineering_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning14 = OfferLearning.create(
+OfferLearning.create(
   learning_id: physical_security_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning15 = OfferLearning.create(
+OfferLearning.create(
   learning_id: incident_crisis_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning16 = OfferLearning.create(
+OfferLearning.create(
   learning_id: fingerprint_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning17 = OfferLearning.create(
+OfferLearning.create(
   learning_id: usb_device_learning.id,
   offer_id: offer_excelcium.id
 )
-offer_learning18 = OfferLearning.create(
+OfferLearning.create(
   learning_id: ransomwares_learning.id,
   offer_id: offer_excelcium.id
 )
-
 
 # create a customer for tests
 cust1 = User.create(first_name: 'Real', last_name: 'Customer', email: 'therealcustomer@yopmail.com', password: '71mdpc0nPLX#', password_confirmation: '71mdpc0nPLX#',
@@ -1057,7 +1059,6 @@ comp1 = Company.create(
 )
 UserCompany.create(user: cust1, company: comp1)
 Purchase.create(company: comp1, offer: offer_essential)
-
 
 admin1 = User.create(
   first_name: 'Admin',
@@ -1069,7 +1070,7 @@ admin1 = User.create(
 )
 
 zorya = Company.create(
-  name: "Zorya_Admin"
+  name: 'Zorya_Admin'
 )
 
 admin_user_company = UserCompany.create(

@@ -11,8 +11,6 @@ class CompaniesController < ApplicationController
     @assignments = Assignment.all
     @offers = Offer.all
     @user_companies = UserCompany.all
-
-  
   end
 
   def edit
@@ -23,11 +21,11 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
 
     if @company.update(channel: params[:company][:channel], webhook: params[:company][:webhook])
-       @company.save
-       flash[:success] = "Vos informations ont bien été enregistrées"
-       redirect_to company_path(params[:id])
+      @company.save
+      flash[:success] = 'Vos informations ont bien été enregistrées'
+      redirect_to company_path(params[:id])
     else
-      flash[:danger] = "Des informations sont manquantes"
+      flash[:danger] = 'Des informations sont manquantes'
       redirect_to company_path(params[:id])
     end
   end
