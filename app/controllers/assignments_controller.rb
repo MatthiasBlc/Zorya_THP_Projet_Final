@@ -23,7 +23,7 @@ class AssignmentsController < ApplicationController
     end
 
     if @list_assignment_of_user_id.include?(@user.id) && @list_assignment_of_learning_id.include?(@learning.id)
-      flash[:danger] = 'cet utilisateur est déjà inscrit à cette formation.'
+      flash[:danger] = 'Cet utilisateur est déjà inscrit à cette formation.'
     else
       @assignment = Assignment.create(user_id: @user.id, learning_id: @learning.id)
 

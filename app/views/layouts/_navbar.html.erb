@@ -3,15 +3,15 @@
                      data-primary>
   <% if !user_signed_in? %>
       <%= link_to root_path, class:"rounded bg-primary" do %>
-      <span class=""><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
+        <span class=""><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
       <% end %>
   <% else %>
+      <%= link_to root_path,  class:"navbar-brand mr-16pt d-lg-none"  do %>
+        <span class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
+        <span class="d-none d-lg-block">Luma</span>
+      <% end %>
   <% end %>
   <!-- Navbar Brand -->
-  <%= link_to root_path,  class:"navbar-brand mr-16pt d-lg-none"  do %>
-    <span class="rounded bg-primary"><%= image_tag('logoZorya.png', class: 'img-fluid', id: 'logo-nav', alt: 'logo') %></span>
-    <span class="d-none d-lg-block">Luma</span>
-  <% end %>
   <!-- // END Navbar Brand -->
   <!-- Navbar Toggler -->
   <% if user_signed_in? %>
