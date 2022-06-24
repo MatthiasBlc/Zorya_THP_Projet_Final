@@ -19,7 +19,7 @@ Project is created with:
 ### As a Customer / How to Use?
 * Contact an account manager and sign a subscription to the plaform.
 * Create an account
-* Ask your account manager to link you to your company, give you rights to manage it and helping you to set up your [Slack](###slack) integration if you use this platform with your company.
+* Ask your account manager to link you to your company, give you rights to manage it and helping you to set up your [Slack](##slack) integration if you use this platform with your company.
 * Add your collaborators to your company.
 * Manage learnings attribution.
 
