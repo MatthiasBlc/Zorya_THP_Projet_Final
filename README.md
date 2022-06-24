@@ -4,7 +4,7 @@ https://zorya-learning.herokuapp.com/
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Features](#features / How to Use?)
+* [Features](#features)
 * [Sources](#sources)
 
 ## General info
@@ -15,21 +15,22 @@ Project is created with:
 * [Ruby 2.7.4](https://ruby-doc.org/core-2.7.4/)
 * [Rails 5.2.8](https://api.rubyonrails.org/v5.2.8/)
 	
-## Features / How to Use?
-### As a Customer
+## Features
+### As a Customer / How to Use?
 * Contact an account manager and sign a subscription to the plaform.
 * Create an account
-* Ask your account manager to link you to your company, give you rights to manage it and helping you to set up your [Slack](###Link a slack account to your company) integration if you use this platform with your company.
+* Ask your account manager to link you to your company, give you rights to manage it and helping you to set up your [Slack](###slack) integration if you use this platform with your company.
 * Add your collaborators to your company.
 * Manage learnings attribution.
 
-### As a User
+### As a User / How to Use?
 * Create your account.
 * Ask a manager of the Zorya platform in your company to associate you with the company and assign you learnings.
 * Fellow your learnings.
 * You receive emails and slack alerts when there are news about your learnings.
 
-### Link a slack account to your company
+### Slack
+Link a slack account to your company
 * Clic in Company : "Paramétrer mon intégration Slack"
 * Enter the name of your slack channel on which you wish to receive information from Zorya (example #general).
 * Fill in your Webhook.
