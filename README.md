@@ -31,14 +31,24 @@ Project is created with:
 
 ### Slack
 Link a slack account to your company
-* Clic in Company : "Paramétrer mon intégration Slack"
+* Clic in the sidebar:  "Mon espace entreprise"
+* Click in Company : "Paramétrer mon intégration Slack"
 * Enter the name of your slack channel on which you wish to receive information from Zorya (example #general).
 * Fill in your Webhook.
 * To get the WEBHOOK_URL you need:
+ * login to your workspace
  * go to https://slack.com/apps/A0F7XDUAZ-incoming-webhooks
- * choose your team, press configure
- * in configurations press add configuration
- * choose channel, press "Add Incoming WebHooks integration"
+ * click "ajouter à Slack"
+ * choose your channel, press "Add Incoming WebHooks integration"
+ * just copy your "webhook url" in red.
+ * Fill in your Webhook.
+
+### As an Admin / How to Use when a customer subscribe?
+* Connect to your account.
+* Clic on the sidebar: "Administrer Zorya"
+* Clic on the sidebar: "company" then "+ add new"
+* Clic on the sidebar: "user" then take the user ID of your customer.
+* Clic on the sidebar: "User company" then "+ add new" for create a relation beween the new company and the customer account.
 
 ## Sources
 This app is created through the [The Hacking Project](https://www.thehackingproject.org) bootcamp and made by [Sngm4](https://github.com/Sngm4), [Lxvia](https://github.com/Lxvia), and [MatthiasBlc](https://github.com/MatthiasBlc).
