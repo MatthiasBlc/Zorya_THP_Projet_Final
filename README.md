@@ -48,6 +48,7 @@ Link a slack account to your company
 * Clic on the sidebar: "Administrer Zorya"
 * Clic on the sidebar: "company" then "+ add new"
 * Clic on the sidebar: "user" then take the user ID of your customer.
+* Also edit the User and change is status from "User" to "Customer"
 * Clic on the sidebar: "User company" then "+ add new" for create a relation beween the new company and the customer account.
 
 ## Sources
