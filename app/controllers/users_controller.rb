@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :sign_out
   def show
     @user = User.find(current_user.id)
   end
@@ -18,5 +19,11 @@ class UsersController < ApplicationController
       flash[:danger] = 'Des informations sont manquantes'
       redirect_to user_path(current_user.id)
     end
+  end
+
+  private
+
+  def sign_out
+    redirect_to root_path unless user_signed_in?
   end
 end
