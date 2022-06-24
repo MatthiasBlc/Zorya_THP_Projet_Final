@@ -1,4 +1,5 @@
 class AssignmentsController < ApplicationController
+  before_action :sign_out
   def index
     @assignments = Assignment.all
   end
@@ -51,5 +52,11 @@ class AssignmentsController < ApplicationController
       format.html { redirect_to company_path, notice: 'Désinscription réussie' }
       format.js {}
     end
+  end
+
+  private
+
+  def sign_out
+    redirect_to root_path unless user_signed_in?
   end
 end

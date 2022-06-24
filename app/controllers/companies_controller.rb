@@ -72,8 +72,12 @@ class CompaniesController < ApplicationController
   private
 
   def customer_or_administrator
-    unless current_user.status_customer? || current_user.status_administrator?
-      flash[:danger] = "Vous n'avez pas accès à cette page"
+    if user_signed_in?
+      unless current_user.status_customer? || current_user.status_administrator?
+        flash[:danger] = "Vous n'avez pas accès à cette page"
+        redirect_to root_path
+      end
+    else
       redirect_to root_path
     end
   end
